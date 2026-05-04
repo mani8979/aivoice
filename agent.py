@@ -33,6 +33,9 @@ logger = logging.getLogger("voice-agent")
 
 import config
 
+# Pre-load VAD model globally to avoid reload latency
+VAD_MODEL = silero.VAD.load()
+
 def _build_tts(config_provider: str = None, config_voice: str = None):
     """Configure TTS. Tries Sarvam first (for Telugu). Falls back to Deepgram on failure."""
     provider = (config_provider or os.getenv("TTS_PROVIDER", config.DEFAULT_TTS_PROVIDER)).lower()
@@ -126,7 +129,7 @@ async def entrypoint(ctx: agents.JobContext):
         logger.info(f"TTS: {type(tts_instance).__name__} | LLM: {type(llm_instance).__name__}")
 
         session = AgentSession(
-            vad=silero.VAD.load(),
+            vad=VAD_MODEL,
             stt=deepgram.STT(
                 model=config.STT_MODEL,
                 language="te",
