@@ -9,7 +9,9 @@ function toLiveKitApiUrl(url: string) {
 
 export async function GET(req: NextRequest) {
   const room = req.nextUrl.searchParams.get('room');
-  const identity = req.nextUrl.searchParams.get('identity') || `user_${Math.floor(Math.random() * 10000)}`;
+  const identity =
+    req.nextUrl.searchParams.get('identity') ||
+    `user_${Math.floor(Math.random() * 10000)}`;
 
   if (!room) {
     return NextResponse.json({ error: 'Missing room parameter' }, { status: 400 });
@@ -23,32 +25,23 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Server misconfigured' }, { status: 500 });
   }
 
-  try {
-    const dispatchClient = new AgentDispatchClient(toLiveKitApiUrl(wsUrl), apiKey, apiSecret);
-    await dispatchClient.createDispatch(room, AGENT_NAME);
-  } catch (error) {
-    console.error('Failed to dispatch LiveKit agent:', error);
-    return NextResponse.json(
-      {
-        error: `Could not dispatch agent "${AGENT_NAME}". Make sure the Python agent is running with: python agent.py dev`,
-      },
-      { status: 503 },
-    );
-  }
-
-  const at = new AccessToken(apiKey, apiSecret, {
-    identity: identity,
-  });
-
+  // ✅ Generate the token immediately — don't wait for dispatch
+  const at = new AccessToken(apiKey, apiSecret, { identity });
   at.addGrant({
     roomJoin: true,
-    room: room,
+    room,
     canPublish: true,
     canSubscribe: true,
   });
+  const token = await at.toJwt();
 
-  return NextResponse.json({
-    token: await at.toJwt(),
-    url: wsUrl,
-  });
+  // 🚀 Dispatch agent in background — fire and forget (does NOT block the response)
+  const dispatchClient = new AgentDispatchClient(toLiveKitApiUrl(wsUrl), apiKey, apiSecret);
+  dispatchClient
+    .createDispatch(room, AGENT_NAME)
+    .then(() => console.log(`[token] Agent "${AGENT_NAME}" dispatched to room "${room}"`))
+    .catch((err) => console.error(`[token] Dispatch warning (agent may already be registered):`, err));
+
+  // ✅ Return token immediately — user connects to room while agent starts up
+  return NextResponse.json({ token, url: wsUrl });
 }
