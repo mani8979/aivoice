@@ -1,0 +1,41 @@
+services:
+  # 1. The Voice Agent (Python Background Worker)
+  - type: worker
+    name: aivoice-agent
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python agent.py start
+    envVars:
+      - key: LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: SARVAM_API_KEY
+        sync: false
+      - key: DEEPGRAM_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+
+  # 2. The Dashboard UI (Next.js Web Service)
+  - type: web
+    name: aivoice-dashboard
+    env: node
+    rootDir: dashboard
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: SARVAM_API_KEY
+        sync: false
+      - key: DEEPGRAM_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
