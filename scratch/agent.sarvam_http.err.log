@@ -1,0 +1,11 @@
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching D:\AI\LIvekitAIVoice-main\LIvekitAIVoice-main
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:HTTP server listening on :56370
+INFO:livekit.agents:registered worker

@@ -1,0 +1,891 @@
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching D:\AI\LIvekitAIVoice-main\LIvekitAIVoice-main
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:HTTP server listening on :60866
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+DEBUG:livekit.agents:received assignment
+WARNING:livekit.agents:no warmed process available for job, waiting for one to be created
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+INFO:voice-agent:Connecting to room: room_1zc98h
+INFO:voice-agent:Connected to room successfully
+INFO:voice-agent:Using Groq LLM
+INFO:voice-agent:Using Deepgram TTS (Model: aura-2-andromeda-en)
+INFO:voice-agent:Agent session initialized
+DEBUG:livekit.agents:configuring session recording
+WARNING:livekit.agents:RoomInputOptions and RoomOutputOptions are deprecated, use RoomOptions instead
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream attached
+INFO:livekit.agents:adaptive interruption detector initialized
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+ERROR:livekit.agents:Error in _stt_pump
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\voice\audio_recognition.py", line 115, in _stt_pump
+    async for ev in node:
+    ...<3 lines>...
+        self._event_ch.send_nowait(ev)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\voice\agent.py", line 407, in stt_node
+    async with wrapped_stt.stream(conn_options=conn_options) as stream:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\plugins\deepgram\stt.py", line 269, in stream
+    stream = SpeechStream(
+        stt=self,
+    ...<4 lines>...
+        base_url=self._opts.endpoint_url,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\plugins\deepgram\stt.py", line 395, in __init__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: language detection is not supported in streaming mode, please disable it and specify a language
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `RecorderIO` -> `AgentSession` -> `RecorderIO` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+INFO:voice-agent:Session started
+INFO:voice-agent:Agent is now active and listening.
+DEBUG:livekit.plugins.deepgram:Established new Deepgram TTS WebSocket connection:
+DEBUG:livekit.agents:aec warmup active, disabling interruptions for 3.00s
+DEBUG:livekit.agents:aec warmup expired, re-enabling interruptions
+DEBUG:livekit.agents:stream closed
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:session closed
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:livekit.agents:uploading session report to LiveKit Cloud
+DEBUG:livekit.agents:finished uploading
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:HTTP server listening on :49266
+ERROR:livekit.agents:Error in _read_ipc_task
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\utils\aio\duplex_unix.py", line 35, in recv_bytes
+    len_bytes = await self._reader.readexactly(4)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\streams.py", line 767, in readexactly
+    raise exceptions.IncompleteReadError(incomplete, n)
+asyncio.exceptions.IncompleteReadError: 0 bytes read on a total of 4 expected bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\cli\watcher.py", line 136, in _read_ipc_task
+    msg = await channel.arecv_message(self._pch, proto.IPC_MESSAGES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\ipc\channel.py", line 47, in arecv_message
+    return _read_message(await dplx.recv_bytes(), messages)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\utils\aio\duplex_unix.py", line 43, in recv_bytes
+    raise DuplexClosed() from e
+livekit.agents.utils.aio.duplex_unix.DuplexClosed
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+DEBUG:livekit.agents:received assignment
+WARNING:livekit.agents:no warmed process available for job, waiting for one to be created
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+INFO:voice-agent:Connecting to room: room_a1bcui
+INFO:voice-agent:Connected to room successfully
+INFO:voice-agent:Using Groq LLM
+INFO:voice-agent:Using Deepgram TTS (Model: aura-2-andromeda-en)
+INFO:voice-agent:Agent session initialized
+DEBUG:livekit.agents:configuring session recording
+WARNING:livekit.agents:RoomInputOptions and RoomOutputOptions are deprecated, use RoomOptions instead
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream attached
+INFO:livekit.agents:adaptive interruption detector initialized
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+ERROR:livekit.agents:Error in _stt_pump
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\voice\audio_recognition.py", line 115, in _stt_pump
+    async for ev in node:
+    ...<3 lines>...
+        self._event_ch.send_nowait(ev)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\voice\agent.py", line 407, in stt_node
+    async with wrapped_stt.stream(conn_options=conn_options) as stream:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\plugins\deepgram\stt.py", line 269, in stream
+    stream = SpeechStream(
+        stt=self,
+    ...<4 lines>...
+        base_url=self._opts.endpoint_url,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\plugins\deepgram\stt.py", line 395, in __init__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: language detection is not supported in streaming mode, please disable it and specify a language
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `RecorderIO` -> `AgentSession` -> `RecorderIO` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+INFO:voice-agent:Session started
+INFO:voice-agent:Agent is now active and listening.
+DEBUG:livekit.plugins.deepgram:Established new Deepgram TTS WebSocket connection:
+DEBUG:livekit.agents:flush audio emitter due to slow audio generation
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:livekit.agents:aec warmup active, disabling interruptions for 3.00s
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:livekit.agents:aec warmup expired, re-enabling interruptions
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http.metric_exporter:Failed to export metrics batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+WARNING:livekit.plugins.silero:max_buffered_speech reached, ignoring further data for the current speech input
+ERROR:opentelemetry.sdk._shared_internal:Exception while exporting Span.
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='ai-ol2pplrk.livekit.cloud', port=443): Read timed out. (read timeout=9.999999046325684)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\sdk\_shared_internal\__init__.py", line 179, in _export
+    self._exporter.export(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        [
+        ^
+    ...<8 lines>...
+        ]
+        ^
+    )
+    ^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\exporter\otlp\proto\http\trace_exporter\__init__.py", line 182, in export
+    resp = self._export(serialized_data, deadline_sec - time())
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\exporter\otlp\proto\http\trace_exporter\__init__.py", line 157, in _export
+    resp = self._session.post(
+        url=self._endpoint,
+    ...<3 lines>...
+        cert=self._client_cert,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 640, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\telemetry\traces.py", line 174, in request
+    return super().request(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\adapters.py", line 691, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='ai-ol2pplrk.livekit.cloud', port=443): Read timed out. (read timeout=9.999999046325684)
+WARNING:livekit:livekit::rtc_engine:503:livekit::rtc_engine - received session close: "signal client closed: \"ping timeout\"" UnknownReason Resume
+ERROR:livekit:livekit::rtc_engine:813:livekit::rtc_engine - resuming connection... attempt: 0
+WARNING:livekit.agents:failed to connect to livekit, retrying in 0s
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1085, in _connection_task
+    await self._run_ws(ws)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1167, in _run_ws
+    await asyncio.gather(*tasks)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1139, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+INFO:livekit.agents:registered worker
+DEBUG:livekit.agents:reported active jobs after registration
+ERROR:livekit:livekit_api::signal_client::signal_stream:413:livekit_api::signal_client::signal_stream - unhandled websocket message Err(Io(Os { code: 10054, kind: ConnectionReset, message: "An existing connection was forcibly closed by the remote host." }))
+ERROR:opentelemetry.sdk._shared_internal:Exception while exporting Span.
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='ai-ol2pplrk.livekit.cloud', port=443): Read timed out. (read timeout=9.999998331069946)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\sdk\_shared_internal\__init__.py", line 179, in _export
+    self._exporter.export(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        [
+        ^
+    ...<8 lines>...
+        ]
+        ^
+    )
+    ^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\exporter\otlp\proto\http\trace_exporter\__init__.py", line 182, in export
+    resp = self._export(serialized_data, deadline_sec - time())
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\exporter\otlp\proto\http\trace_exporter\__init__.py", line 157, in _export
+    resp = self._session.post(
+        url=self._endpoint,
+    ...<3 lines>...
+        cert=self._client_cert,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 640, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\telemetry\traces.py", line 174, in request
+    return super().request(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\adapters.py", line 691, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='ai-ol2pplrk.livekit.cloud', port=443): Read timed out. (read timeout=9.999998331069946)
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+WARNING:livekit.plugins.silero:max_buffered_speech reached, ignoring further data for the current speech input
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+WARNING:livekit.plugins.silero:max_buffered_speech reached, ignoring further data for the current speech input
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.agents:input stream detached
+INFO:livekit.agents:received job request
+DEBUG:livekit.agents:session closed
+INFO:livekit.agents:received job request
+WARNING:livekit.agents:assignment for job AJ_5tnk7syw252A timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+WARNING:livekit.agents:assignment for job AJ_5tnk7syw252A timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+ERROR:livekit:livekit_api::signal_client::signal_stream:413:livekit_api::signal_client::signal_stream - unhandled websocket message Err(Io(Os { code: 10054, kind: ConnectionReset, message: "An existing connection was forcibly closed by the remote host." }))
+DEBUG:livekit.agents:uploading session report to LiveKit Cloud
+DEBUG:livekit.agents:finished uploading
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+WARNING:livekit.agents:assignment for job AJ_7oCKBfymrgeE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:livekit.agents:received job request
+WARNING:livekit.agents:assignment for job AJ_7oCKBfymrgeE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+WARNING:livekit.agents:assignment for job AJ_7oCKBfymrgeE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+WARNING:livekit.agents:assignment for job AJ_7oCKBfymrgeE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:livekit.agents:received job request
+WARNING:livekit.agents:assignment for job AJ_7oCKBfymrgeE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+WARNING:livekit.agents:assignment for job AJ_7oCKBfymrgeE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+WARNING:livekit.agents:assignment for job AJ_7oCKBfymrgeE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:livekit.agents:received job request
+WARNING:livekit.agents:assignment for job AJ_7oCKBfymrgeE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:livekit.agents:received job request
+WARNING:livekit.agents:assignment for job AJ_7oCKBfymrgeE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+WARNING:livekit.agents:assignment for job AJ_tdEE7rqtkNxy timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+INFO:livekit.agents:received job request
+INFO:livekit.agents:received job request
+DEBUG:livekit.agents:received assignment
+WARNING:livekit.agents:no warmed process available for job, waiting for one to be created
+INFO:livekit.agents:initializing job runner
+INFO:livekit.agents:job runner initialized
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:voice-agent:Connecting to room: room_zo6y1h
+INFO:voice-agent:Connected to room successfully
+INFO:voice-agent:Using Groq LLM
+INFO:voice-agent:Using Deepgram TTS (Model: aura-2-andromeda-en)
+INFO:voice-agent:Agent session initialized
+DEBUG:livekit.agents:configuring session recording
+WARNING:livekit.agents:RoomInputOptions and RoomOutputOptions are deprecated, use RoomOptions instead
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream attached
+INFO:livekit.agents:adaptive interruption detector initialized
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+ERROR:livekit.agents:Error in _stt_pump
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\voice\audio_recognition.py", line 115, in _stt_pump
+    async for ev in node:
+    ...<3 lines>...
+        self._event_ch.send_nowait(ev)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\voice\agent.py", line 407, in stt_node
+    async with wrapped_stt.stream(conn_options=conn_options) as stream:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\plugins\deepgram\stt.py", line 269, in stream
+    stream = SpeechStream(
+        stt=self,
+    ...<4 lines>...
+        base_url=self._opts.endpoint_url,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\plugins\deepgram\stt.py", line 395, in __init__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: language detection is not supported in streaming mode, please disable it and specify a language
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `RecorderIO` -> `AgentSession` -> `RecorderIO` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+INFO:voice-agent:Session started
+INFO:voice-agent:Agent is now active and listening.
+DEBUG:livekit.plugins.deepgram:Established new Deepgram TTS WebSocket connection:
+DEBUG:livekit.agents:aec warmup active, disabling interruptions for 3.00s
+DEBUG:livekit.agents:flush audio emitter due to slow audio generation
+DEBUG:livekit.agents:aec warmup expired, re-enabling interruptions
+WARNING:livekit.agents:assignment for job AJ_3qpVTEMkGUsE timed out
+ERROR:livekit.agents:job_request_fnc failed
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+WARNING:livekit.agents:Input is shorter by 639362 samples; silence has been prepended to align the input channel. The resulting recording may not accurately reflect the original audio. This is expected if the input device or audio input is disabled. This warning will only be shown once.
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:failed to connect to livekit, retrying in 0s
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1085, in _connection_task
+    await self._run_ws(ws)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1167, in _run_ws
+    await asyncio.gather(*tasks)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\worker.py", line 1139, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+WARNING:livekit.agents:failed to detect interruption, retrying in 0.1s
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\inference\interruption.py", line 479, in _main_task
+    return await self._run()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\inference\interruption.py", line 1094, in _run
+    task.result()
+    ~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\inference\interruption.py", line 982, in recv_task
+    raise APIStatusError(
+    ...<3 lines>...
+    )
+livekit.agents._exceptions.APIStatusError: message='LiveKit Adaptive Interruption connection closed unexpectedly: None', status_code=1006, retryable=True, body=ws_msg.data=None ws_msg.extra=None
+ERROR:livekit:livekit_api::signal_client::signal_stream:413:livekit_api::signal_client::signal_stream - unhandled websocket message Err(Io(Os { code: 10054, kind: ConnectionReset, message: "An existing connection was forcibly closed by the remote host." }))
+ERROR:opentelemetry.sdk._shared_internal:Exception while exporting Span.
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line 725, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\exporter\otlp\proto\http\trace_exporter\__init__.py", line 157, in _export
+    resp = self._session.post(
+        url=self._endpoint,
+    ...<3 lines>...
+        cert=self._client_cert,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 640, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\telemetry\traces.py", line 174, in request
+    return super().request(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line 983, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='ai-ol2pplrk.livekit.cloud', port=443): Failed to resolve 'ai-ol2pplrk.livekit.cloud' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ai-ol2pplrk.livekit.cloud', port=443): Max retries exceeded with url: /observability/traces/otlp/v0 (Caused by NameResolutionError("HTTPSConnection(host='ai-ol2pplrk.livekit.cloud', port=443): Failed to resolve 'ai-ol2pplrk.livekit.cloud' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\sdk\_shared_internal\__init__.py", line 179, in _export
+    self._exporter.export(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        [
+        ^
+    ...<8 lines>...
+        ]
+        ^
+    )
+    ^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\exporter\otlp\proto\http\trace_exporter\__init__.py", line 182, in export
+    resp = self._export(serialized_data, deadline_sec - time())
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\opentelemetry\exporter\otlp\proto\http\trace_exporter\__init__.py", line 165, in _export
+    resp = self._session.post(
+        url=self._endpoint,
+    ...<3 lines>...
+        cert=self._client_cert,
+    )
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 640, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\agents\telemetry\traces.py", line 174, in request
+    return super().request(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='ai-ol2pplrk.livekit.cloud', port=443): Max retries exceeded with url: /observability/traces/otlp/v0 (Caused by NameResolutionError("HTTPSConnection(host='ai-ol2pplrk.livekit.cloud', port=443): Failed to resolve 'ai-ol2pplrk.livekit.cloud' ([Errno 11001] getaddrinfo failed)"))
+WARNING:livekit:livekit::rtc_engine:503:livekit::rtc_engine - received session close: "signal client closed: \"stream closed\"" UnknownReason Resume
+ERROR:livekit:livekit::rtc_engine:813:livekit::rtc_engine - resuming connection... attempt: 0
+ERROR:livekit:livekit::rtc_engine:815:livekit::rtc_engine - resuming connection failed: signal failure: ws failure: IO error: No such host is known. (os error 11001)
+ERROR:livekit:livekit::rtc_engine:789:livekit::rtc_engine - restarting connection... attempt: 1
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+INFO:livekit.agents:registered worker
+DEBUG:livekit.agents:reported active jobs after registration
+ERROR:root:error running user callback for local_track_published: room_handle: 51295
+local_track_published {
+  track_sid: "TR_AMkdcvp7v4PNXm"
+}
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\rtc\room.py", line 640, in _listen_task
+    self._on_room_event(event.room_event)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\rtc\room.py", line 692, in _on_room_event
+    lpublication = self.local_participant.track_publications[sid]
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: 'TR_AMkdcvp7v4PNXm'
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:livekit.agents:input stream detached
+WARNING:livekit.agents:input speech hasn't started yet, skipping silence padding, recording may be inaccurate until the speech starts
+DEBUG:livekit.agents:session closed
+DEBUG:livekit.agents:uploading session report to LiveKit Cloud
+DEBUG:livekit.agents:finished uploading
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+WARNING:opentelemetry.sdk.metrics._internal:shutdown can only be called once
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx

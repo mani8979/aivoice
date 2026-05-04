@@ -1,0 +1,27 @@
+    14:43:59.625 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:43:59.657 DEV      livekit.agents     Watching                          
+                                             D:\AI\LIvekitAIVoice-main\LIvek…  
+    14:44:02.115 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:44:02.153 INFO     livekit.agents     starting worker  
+                                         {"version": "1.5.7", "rtc-version": 
+"1.1.7"}
+    14:44:02.186 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.openai", 
+"version": "1.5.7"}
+    14:44:02.223 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.cartesia",
+"version": "1.5.7"}
+    14:44:02.245 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.deepgram",
+"version": "1.5.7"}
+    14:44:02.250 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.silero", 
+"version": "1.5.7"}
+    14:44:02.255 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.sarvam", 
+"version": "1.5.7"}
+    14:44:02.263 INFO     livekit.agents     HTTP server listening on :56370  
+    14:44:02.343 INFO     livekit.agents     registered worker  
+                                         {"agent_name": "outbound-caller", 
+"id": "AW_3ZRkD5RRjAfv", "url": "wss://ai-ol2pplrk.livekit.cloud", "region": 
+"India South", "protocol": 17}

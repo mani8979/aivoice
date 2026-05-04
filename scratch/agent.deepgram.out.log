@@ -1,0 +1,2290 @@
+    14:09:42.732 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:09:42.761 DEV      livekit.agents     Watching                          
+                                             D:\AI\LIvekitAIVoice-main\LIvek…  
+    14:09:46.842 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:09:46.861 INFO     livekit.agents     starting worker  
+                                         {"version": "1.5.7", "rtc-version": 
+"1.1.7"}
+    14:09:46.874 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.openai", 
+"version": "1.5.7"}
+    14:09:46.889 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.cartesia",
+"version": "1.5.7"}
+    14:09:46.904 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.deepgram",
+"version": "1.5.7"}
+    14:09:46.911 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.silero", 
+"version": "1.5.7"}
+    14:09:46.915 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.sarvam", 
+"version": "1.5.7"}
+    14:09:46.927 INFO     livekit.agents     HTTP server listening on :54064  
+    14:09:47.696 INFO     livekit.agents     registered worker  
+                                         {"agent_name": "outbound-caller", 
+"id": "AW_hpT6EGiBpuGk", "url": "wss://ai-ol2pplrk.livekit.cloud", "region": 
+"India South", "protocol": 17}
+    14:10:56.485 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_GJLn95LvP8fU", 
+"dispatch_id": "AD_o2VgTFNXSGhs", "room": "room_bhxgts", "room_id": 
+"RM_c2my6QnL7kzs", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:10:56.543 DEBUG    livekit.agents     received assignment  
+                                         {"agent_name": "outbound-caller", 
+"room_id": "RM_c2my6QnL7kzs", "room": "room_bhxgts", "job_id": 
+"AJ_GJLn95LvP8fU", "dispatch_id": "AD_o2VgTFNXSGhs", "enable_recording": true}
+    14:10:56.557 WARNING  livekit.agents     no warmed process available for   
+                                             job, waiting for one to be        
+                                             created                           
+                                         {"job_id": "AJ_GJLn95LvP8fU"}
+    14:10:56.572 INFO     livekit.agents     initializing job runner  
+                                         {"tid": 21620}
+    14:10:56.579 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:10:56.580 INFO     livekit.agents     job runner initialized  
+                                         {"tid": 21620, "elapsed_time": 0.0}
+    14:10:56.598 INFO     voice-agent        Connecting to room: room_bhxgts  
+    14:10:59.724 INFO     voice-agent        Connected to room successfully  
+    14:10:59.970 INFO     voice-agent        Using Groq LLM  
+    14:11:00.504 INFO     voice-agent        Using Deepgram TTS (Model:        
+                                             aura-2-andromeda-en)              
+    14:11:00.512 INFO     voice-agent        Agent session initialized  
+    14:11:00.515 DEBUG    livekit.agents     configuring session recording  
+    14:11:00.527 WARNING  livekit.agents     RoomInputOptions and              
+                                             RoomOutputOptions are             
+                                             deprecated, use RoomOptions       
+                                             instead                           
+    14:11:00.536 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:11:00.542 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:11:00.545 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:11:00.551 INFO     livekit.agents     adaptive interruption detector    
+                                             initialized                       
+                                         {"base_url": 
+"https://agent-gateway.livekit.cloud/v1", "detection_interval": 0.1, 
+"audio_prefix_duration": 1.0, "max_audio_duration": 3, "min_frames": 2, 
+"threshold": 0.5, "inference_timeout": 0.7, "use_proxy": true}
+    14:11:00.569 DEBUG    livekit.agents     http_session(): creating a new    
+                                             httpclient ctx                    
+    14:11:00.583 DEBUG    livekit.agents     using audio io: `RoomIO` ->       
+                                             `RecorderIO` -> `AgentSession`    
+                                             -> `RecorderIO` ->                
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:11:00.594 DEBUG    livekit.agents     using transcript io:              
+                                             `AgentSession` ->                 
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:11:00.605 INFO     voice-agent        Session started  
+    14:11:00.608 INFO     voice-agent        Agent is now active and           
+                                             listening.                        
+    14:11:01.863 DEBUG    livekit.….deepgram Established new Deepgram STT      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df226-3b11-7941-a787-9df6af5adec7", "Date": "Mon, 04 May 2026 08:41:25 
+GMT"}}
+    14:11:01.880 DEBUG    livekit.….deepgram Established new Deepgram TTS      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df226-3b17-7f03-9700-15cd89b10219", "Date": "Mon, 04 May 2026 08:41:25 
+GMT"}}
+    14:11:02.233 DEBUG    livekit.agents     aec warmup active, disabling      
+                                             interruptions for 3.00s           
+    14:11:05.234 DEBUG    livekit.agents     aec warmup expired, re-enabling   
+                                             interruptions                     
+    14:11:06.561 WARNING  livekit.agents     Input is shorter by 199682        
+                                             samples; silence has been         
+                                             prepended to align the input      
+                                             channel. The resulting recording  
+                                             may not accurately reflect the    
+                                             original audio. This is expected  
+                                             if the input device or audio      
+                                             input is disabled. This warning   
+                                             will only be shown once.          
+    14:11:08.070 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:10.584 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:13.102 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:15.619 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:18.131 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:20.648 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:23.165 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:25.689 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:28.205 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:30.717 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:33.232 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:35.770 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:38.289 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:40.820 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:40.829 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_ggMeJ2UVmxTS", 
+"dispatch_id": "AD_aau5JTjK4VXs", "room": "room_987w9n", "room_id": 
+"RM_wFw8aBpVQkjk", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:11:40.907 DEBUG    livekit.agents     received assignment  
+                                         {"agent_name": "outbound-caller", 
+"room_id": "RM_wFw8aBpVQkjk", "room": "room_987w9n", "job_id": 
+"AJ_ggMeJ2UVmxTS", "dispatch_id": "AD_aau5JTjK4VXs", "enable_recording": true}
+    14:11:40.922 WARNING  livekit.agents     no warmed process available for   
+                                             job, waiting for one to be        
+                                             created                           
+                                         {"job_id": "AJ_ggMeJ2UVmxTS"}
+    14:11:40.941 INFO     livekit.agents     initializing job runner  
+                                         {"tid": 17176}
+    14:11:40.955 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:11:40.960 INFO     livekit.agents     job runner initialized  
+                                         {"tid": 17176, "elapsed_time": 0.01}
+    14:11:40.980 INFO     voice-agent        Connecting to room: room_987w9n  
+    14:11:43.358 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:43.496 INFO     voice-agent        Connected to room successfully  
+    14:11:43.719 INFO     voice-agent        Using Groq LLM  
+    14:11:44.648 INFO     voice-agent        Using Deepgram TTS (Model:        
+                                             aura-2-andromeda-en)              
+    14:11:44.689 INFO     voice-agent        Agent session initialized  
+    14:11:44.695 DEBUG    livekit.agents     configuring session recording  
+    14:11:44.720 WARNING  livekit.agents     RoomInputOptions and              
+                                             RoomOutputOptions are             
+                                             deprecated, use RoomOptions       
+                                             instead                           
+    14:11:44.738 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:11:44.746 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:11:44.755 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:11:44.765 INFO     livekit.agents     adaptive interruption detector    
+                                             initialized                       
+                                         {"base_url": 
+"https://agent-gateway.livekit.cloud/v1", "detection_interval": 0.1, 
+"audio_prefix_duration": 1.0, "max_audio_duration": 3, "min_frames": 2, 
+"threshold": 0.5, "inference_timeout": 0.7, "use_proxy": true}
+    14:11:44.781 DEBUG    livekit.agents     http_session(): creating a new    
+                                             httpclient ctx                    
+    14:11:44.796 DEBUG    livekit.agents     using audio io: `RoomIO` ->       
+                                             `RecorderIO` -> `AgentSession`    
+                                             -> `RecorderIO` ->                
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:11:44.810 DEBUG    livekit.agents     using transcript io:              
+                                             `AgentSession` ->                 
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:11:44.823 INFO     voice-agent        Session started  
+    14:11:44.829 INFO     voice-agent        Agent is now active and           
+                                             listening.                        
+    14:11:45.679 DEBUG    livekit.….deepgram Established new Deepgram TTS      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df226-e649-7a33-a1a0-3ceaccaed67f", "Date": "Mon, 04 May 2026 08:42:08 
+GMT"}}
+    14:11:45.708 DEBUG    livekit.….deepgram Established new Deepgram STT      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df226-e64d-7472-b007-972276754b31", "Date": "Mon, 04 May 2026 08:42:08 
+GMT"}}
+    14:11:45.885 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:46.043 DEBUG    livekit.agents     aec warmup active, disabling      
+                                             interruptions for 3.00s           
+    14:11:46.087 DEBUG    livekit.agents     start reading stream  
+                                         {"participant": 
+"user_f798c365-fdf2-44c2-b221-7f0bd805cefb", "source": "SOURCE_MICROPHONE"}
+    14:11:48.418 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:49.059 DEBUG    livekit.agents     aec warmup expired, re-enabling   
+                                             interruptions                     
+    14:11:50.844 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:11:50.854 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:11:50.866 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:11:50.973 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:52.085 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:11:52.103 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:11:53.098 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "Hi.", "language":
+"en", "transcript_delay": 0.4195692539215088}
+    14:11:53.244 DEBUG    livekit.agents     using preemptive generation  
+                                         {"preemptive_lead_time": 
+0.1301581859588623}
+    14:11:53.510 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:56.036 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:11:56.943 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:11:56.955 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:11:58.562 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:01.088 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:03.049 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:12:03.064 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:12:03.079 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:12:03.604 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:06.134 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:06.945 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "Hello?", 
+"language": "en", "transcript_delay": 0.45659375190734863}
+    14:12:07.027 DEBUG    livekit.agents     using preemptive generation  
+                                         {"preemptive_lead_time": 
+0.06827998161315918}
+    14:12:08.656 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:09.170 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:12:09.191 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:12:09.533 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:12:09.563 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:12:11.193 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:13.730 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:16.268 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:18.807 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:20.890 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:12:20.907 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:12:20.926 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:12:21.345 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:23.298 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "Hello, Adi 
+there?", "language": "en", "transcript_delay": 0.3600151538848877}
+    14:12:23.440 DEBUG    livekit.agents     using preemptive generation  
+                                         {"preemptive_lead_time": 
+0.12540435791015625}
+    14:12:23.879 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:26.414 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:28.951 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:31.485 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:34.027 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:35.915 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "How many numbers 
+are there in the high school?", "language": "en", "transcript_delay": 
+0.4339606761932373}
+    14:12:36.033 DEBUG    livekit.agents     using preemptive generation  
+                                         {"preemptive_lead_time": 
+0.1015768051147461}
+    14:12:36.566 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:37.080 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:12:37.092 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:12:39.105 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:41.652 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:43.191 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:12:43.216 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:12:43.239 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:12:44.208 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:46.751 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:49.272 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:49.352 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:12:49.363 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:12:51.021 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "K. Share me.", 
+"language": "en", "transcript_delay": 0.44449567794799805}
+    14:12:51.127 DEBUG    livekit.agents     using preemptive generation  
+                                         {"preemptive_lead_time": 
+0.09715032577514648}
+    14:12:51.793 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:52.225 DEBUG    livekit.agents     flush audio emitter due to slow   
+                                             audio generation                  
+    14:12:54.313 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:56.836 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:59.357 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:12:59.430 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:12:59.440 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:13:00.741 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:13:00.755 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:13:00.775 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:13:01.879 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:02.750 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:13:02.763 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:13:02.781 ERROR    opentele…_exporter Failed to export metrics batch    
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:13:04.404 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:06.499 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "Okay. By", 
+"language": "en", "transcript_delay": 0.42227625846862793}
+    14:13:06.626 DEBUG    livekit.agents     using preemptive generation  
+                                         {"preemptive_lead_time": 
+0.11403918266296387}
+    14:13:06.933 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:09.462 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:11.990 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:14.534 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:17.063 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:19.583 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:22.104 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:24.614 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:27.125 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:28.132 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:13:28.143 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:13:28.150 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:13:29.632 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:32.152 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:33.877 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:13:33.885 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:13:33.892 ERROR    opentele…_exporter Failed to export metrics batch    
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:13:34.662 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:37.171 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:39.684 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:42.194 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:44.704 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:44.717 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:13:44.722 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:13:44.727 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:13:46.286 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "Hello?", 
+"language": "en", "transcript_delay": 0.41353440284729004}
+    14:13:46.423 DEBUG    livekit.agents     using preemptive generation  
+                                         {"preemptive_lead_time": 
+0.12888860702514648}
+    14:13:47.229 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:48.259 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:13:48.266 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:13:49.765 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:52.280 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:54.382 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:13:54.393 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:13:54.791 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:57.301 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:13:59.814 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:01.579 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:14:01.587 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:14:01.593 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:14:02.324 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:04.836 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:07.346 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:09.853 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:12.364 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:12.947 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:14:12.956 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:14:14.874 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:17.396 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:19.041 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:14:19.052 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:14:19.905 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:22.415 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:24.923 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:27.449 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:29.987 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:31.819 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "I wouldn't with 
+you last, Ben, I brought the", "language": "en", "transcript_delay": 
+0.18514347076416016}
+    14:14:32.013 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "broadband, 
+Jacksonville.", "language": "en", "transcript_delay": 0.37928032875061035}
+    14:14:32.136 DEBUG    livekit.agents     using preemptive generation  
+                                         {"preemptive_lead_time": 
+0.10555338859558105}
+    14:14:32.531 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:33.479 DEBUG    livekit.agents     flush audio emitter due to slow   
+                                             audio generation                  
+    14:14:35.057 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:35.250 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:14:35.255 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:14:35.259 ERROR    opentele…_exporter Failed to export metrics batch    
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:14:37.572 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:40.084 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:42.591 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:42.893 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:14:42.901 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:14:42.906 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:14:45.104 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:46.170 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:14:46.182 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:14:47.617 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:50.130 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:52.647 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:55.160 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:14:57.675 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:00.186 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:02.697 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:02.780 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:02.788 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:02.793 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:15:05.208 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:07.723 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:08.903 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:08.913 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:10.237 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:12.751 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:15.020 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:15.031 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:15.265 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:15.414 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:15.423 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:17.778 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:20.285 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:22.797 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:25.309 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:26.394 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:26.402 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:26.409 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:15:27.817 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:30.328 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:32.835 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:35.346 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:37.853 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:37.908 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:37.913 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:37.918 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:37.929 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:40.367 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:42.877 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:44.001 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:44.013 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:44.026 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:15:45.388 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:47.897 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:49.248 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:49.258 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:50.409 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:52.922 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:55.341 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:15:55.349 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:15:55.434 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:15:57.942 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:00.452 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:02.963 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:05.478 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:06.336 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:16:06.343 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:16:06.350 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:16:06.680 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:16:06.687 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:16:07.991 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:10.501 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:12.801 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:16:12.812 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:16:13.011 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:15.533 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:17.664 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:16:17.671 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:16:18.059 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:20.571 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:23.093 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:23.780 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:16:23.798 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:16:23.810 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:16:25.621 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:28.162 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:30.702 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:33.233 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:35.302 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:16:35.313 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:16:35.755 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:38.294 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:40.818 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:43.344 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:45.200 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:16:45.216 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:16:45.228 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:16:45.861 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:48.374 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:49.205 INFO     livekit.agents     closing agent session due to      
+                                             participant disconnect (disable   
+                                             via                               
+                                             `RoomInputOptions.close_on_disc…  
+                                         {"room": "room_bhxgts", "participant":
+"user_cf478ff2-8722-4d60-b17e-4d463c870256", "reason": "CLIENT_INITIATED"}
+    14:16:49.216 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": 
+"user_cf478ff2-8722-4d60-b17e-4d463c870256", "source": "SOURCE_UNKNOWN", 
+"accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:16:50.888 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:51.335 DEBUG    livekit.agents     session closed  
+                                         {"reason": "participant_disconnected",
+"error": null}
+    14:16:52.265 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:16:52.270 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:16:53.399 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:55.913 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:16:58.343 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:16:58.351 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:16:58.424 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:17:00.942 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:17:01.791 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:17:01.796 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:17:01.803 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:17:03.451 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:17:04.462 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:17:04.474 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:17:05.962 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:17:08.468 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:17:10.977 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:17:11.758 DEBUG    livekit.agents     uploading session report to       
+                                             LiveKit Cloud                     
+    14:17:13.311 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:17:13.318 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:17:13.487 WARNING  livekit.agents     input speech hasn't started yet,  
+                                             skipping silence padding,         
+                                             recording may be inaccurate       
+                                             until the speech starts           
+    14:17:14.455 DEBUG    livekit.agents     finished uploading  
+    14:17:14.462 DEBUG    livekit.agents     shutting down job task  
+                                         {"reason": "", "user_initiated": 
+false}
+    14:17:14.466 DEBUG    livekit.agents     job exiting  
+                                         {"reason": "", "tid": 21620, "job_id":
+"AJ_GJLn95LvP8fU", "room_id": "RM_c2my6QnL7kzs"}
+    14:17:15.921 DEBUG    livekit.agents     http_session(): closing the       
+                                             httpclient ctx                    
+    14:17:45.070 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:17:45.082 INFO     livekit.agents     starting worker  
+                                         {"version": "1.5.7", "rtc-version": 
+"1.1.7"}
+    14:17:45.085 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.openai", 
+"version": "1.5.7"}
+    14:17:45.087 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.cartesia",
+"version": "1.5.7"}
+    14:17:45.090 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.deepgram",
+"version": "1.5.7"}
+    14:17:45.092 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.silero", 
+"version": "1.5.7"}
+    14:17:45.095 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.sarvam", 
+"version": "1.5.7"}
+    14:17:45.099 INFO     livekit.agents     HTTP server listening on :62443  
+    14:17:45.098 ERROR    livekit.agents     Error in _read_ipc_task  
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\aio\duplex_unix.py", line 35, in recv_bytes
+    len_bytes = await self._reader.readexactly(4)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\streams.
+py", line 767, in readexactly
+    raise exceptions.IncompleteReadError(incomplete, n)
+asyncio.exceptions.IncompleteReadError: 0 bytes read on a total of 4 expected 
+bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\cli\watcher.py", line 136, in _read_ipc_task
+    msg = await channel.arecv_message(self._pch, proto.IPC_MESSAGES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\ipc\channel.py", line 47, in arecv_message
+    return _read_message(await dplx.recv_bytes(), messages)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\aio\duplex_unix.py", line 43, in recv_bytes
+    raise DuplexClosed() from e
+livekit.agents.utils.aio.duplex_unix.DuplexClosed
+    14:17:45.459 INFO     livekit.agents     registered worker  
+                                         {"agent_name": "outbound-caller", 
+"id": "AW_zZBdojv58Scd", "url": "wss://ai-ol2pplrk.livekit.cloud", "region": 
+"India South", "protocol": 17}
+    14:17:51.442 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:17:51.455 INFO     livekit.agents     starting worker  
+                                         {"version": "1.5.7", "rtc-version": 
+"1.1.7"}
+    14:17:51.460 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.openai", 
+"version": "1.5.7"}
+    14:17:51.463 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.cartesia",
+"version": "1.5.7"}
+    14:17:51.466 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.deepgram",
+"version": "1.5.7"}
+    14:17:51.469 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.silero", 
+"version": "1.5.7"}
+    14:17:51.471 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.sarvam", 
+"version": "1.5.7"}
+    14:17:51.476 INFO     livekit.agents     HTTP server listening on :62449  
+    14:17:51.766 INFO     livekit.agents     registered worker  
+                                         {"agent_name": "outbound-caller", 
+"id": "AW_XN36F9emHeqz", "url": "wss://ai-ol2pplrk.livekit.cloud", "region": 
+"India South", "protocol": 17}
+    14:18:04.607 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_ggMeJ2UVmxTS", 
+"dispatch_id": "AD_aau5JTjK4VXs", "room": "room_987w9n", "room_id": 
+"RM_wFw8aBpVQkjk", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:18:04.696 DEBUG    livekit.agents     received assignment  
+                                         {"agent_name": "outbound-caller", 
+"room_id": "RM_wFw8aBpVQkjk", "room": "room_987w9n", "job_id": 
+"AJ_ggMeJ2UVmxTS", "dispatch_id": "AD_aau5JTjK4VXs", "enable_recording": true}
+    14:18:04.704 WARNING  livekit.agents     no warmed process available for   
+                                             job, waiting for one to be        
+                                             created                           
+                                         {"job_id": "AJ_ggMeJ2UVmxTS"}
+    14:18:04.711 INFO     livekit.agents     initializing job runner  
+                                         {"tid": 13024}
+    14:18:04.715 INFO     livekit.agents     job runner initialized  
+                                         {"tid": 13024, "elapsed_time": 0.0}
+                 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:18:04.725 INFO     voice-agent        Connecting to room: room_987w9n  
+    14:18:05.957 INFO     voice-agent        Connected to room successfully  
+    14:18:06.071 INFO     voice-agent        Using Groq LLM  
+    14:18:06.371 INFO     voice-agent        Using Deepgram TTS (Model:        
+                                             aura-2-andromeda-en)              
+    14:18:06.379 INFO     voice-agent        Agent session initialized  
+    14:18:06.381 DEBUG    livekit.agents     configuring session recording  
+    14:18:06.389 WARNING  livekit.agents     RoomInputOptions and              
+                                             RoomOutputOptions are             
+                                             deprecated, use RoomOptions       
+                                             instead                           
+    14:18:06.396 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:18:06.399 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:18:06.402 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:18:06.406 INFO     livekit.agents     adaptive interruption detector    
+                                             initialized                       
+                                         {"base_url": 
+"https://agent-gateway.livekit.cloud/v1", "detection_interval": 0.1, 
+"audio_prefix_duration": 1.0, "max_audio_duration": 3, "min_frames": 2, 
+"threshold": 0.5, "inference_timeout": 0.7, "use_proxy": true}
+    14:18:06.415 DEBUG    livekit.agents     http_session(): creating a new    
+                                             httpclient ctx                    
+    14:18:06.420 ERROR    livekit.agents     Error in _stt_pump  
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\voice\audio_recognition.py", line 115, in _stt_pump
+    async for ev in node:
+    ...<3 lines>...
+        self._event_ch.send_nowait(ev)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\voice\agent.py", line 407, in stt_node
+    async with wrapped_stt.stream(conn_options=conn_options) as stream:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\deepgram\stt.py", line 269, in stream
+    stream = SpeechStream(
+        stt=self,
+    ...<4 lines>...
+        base_url=self._opts.endpoint_url,
+    )
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\deepgram\stt.py", line 395, in __init__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: language detection is not supported in streaming mode, please 
+disable it and specify a language
+    14:18:06.436 DEBUG    livekit.agents     using audio io: `RoomIO` ->       
+                                             `RecorderIO` -> `AgentSession`    
+                                             -> `RecorderIO` ->                
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:18:06.442 DEBUG    livekit.agents     using transcript io:              
+                                             `AgentSession` ->                 
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:18:06.446 INFO     voice-agent        Session started  
+    14:18:06.448 INFO     voice-agent        Agent is now active and           
+                                             listening.                        
+    14:18:06.636 DEBUG    livekit.agents     start reading stream  
+                                         {"participant": 
+"user_f798c365-fdf2-44c2-b221-7f0bd805cefb", "source": "SOURCE_MICROPHONE"}
+    14:18:07.418 DEBUG    livekit.….deepgram Established new Deepgram TTS      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df22c-b970-7f81-9c52-90acdbf6b038", "Date": "Mon, 04 May 2026 08:48:30 
+GMT"}}
+    14:18:07.760 DEBUG    livekit.agents     aec warmup active, disabling      
+                                             interruptions for 3.00s           
+    14:18:08.028 DEBUG    livekit.agents     flush audio emitter due to slow   
+                                             audio generation                  
+    14:18:10.760 DEBUG    livekit.agents     aec warmup expired, re-enabling   
+                                             interruptions                     
+    14:21:29.363 INFO     livekit.agents     closing agent session due to      
+                                             participant disconnect (disable   
+                                             via                               
+                                             `RoomInputOptions.close_on_disc…  
+                                         {"room": "room_987w9n", "participant":
+"user_f798c365-fdf2-44c2-b221-7f0bd805cefb", "reason": "CLIENT_INITIATED"}
+    14:21:29.402 DEBUG    livekit.agents     stream closed  
+                                         {"participant": 
+"user_f798c365-fdf2-44c2-b221-7f0bd805cefb", "source": "SOURCE_MICROPHONE"}
+    14:21:29.414 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": 
+"user_f798c365-fdf2-44c2-b221-7f0bd805cefb", "source": "SOURCE_UNKNOWN", 
+"accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:21:30.635 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:21:30.645 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:21:30.654 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:21:31.487 DEBUG    livekit.agents     session closed  
+                                         {"reason": "participant_disconnected",
+"error": null}
+    14:21:36.744 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:21:36.755 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:21:42.861 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:21:42.880 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:21:42.898 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:21:51.746 DEBUG    livekit.agents     uploading session report to       
+                                             LiveKit Cloud                     
+    14:21:57.728 DEBUG    livekit.agents     finished uploading  
+    14:21:57.745 DEBUG    livekit.agents     shutting down job task  
+                                         {"reason": "", "user_initiated": 
+false}
+    14:21:57.762 DEBUG    livekit.agents     job exiting  
+                                         {"reason": "", "tid": 13024, "job_id":
+"AJ_ggMeJ2UVmxTS", "room_id": "RM_wFw8aBpVQkjk"}
+    14:21:59.779 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:21:59.782 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:21:59.795 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:21:59.806 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:21:59.842 ERROR    opentele…_exporter Failed to export metrics batch    
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:21:59.854 DEBUG    livekit.agents     http_session(): closing the       
+                                             httpclient ctx                    
+    14:27:44.464 WARNING  livekit.agents     failed to connect to livekit,     
+                                             retrying in 0s                    
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1085, in _connection_task
+    await self._run_ws(ws)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1167, in _run_ws
+    await asyncio.gather(*tasks)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1139, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+    14:27:44.666 INFO     livekit.agents     registered worker  
+                                         {"agent_name": "outbound-caller", 
+"id": "AW_EgkptoPmLyWT", "url": "wss://ai-ol2pplrk.livekit.cloud", "region": 
+"India South", "protocol": 17}
+    14:34:36.771 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_5tnk7syw252A", 
+"dispatch_id": "AD_9XAnKDxMnF44", "room": "room_i6zw4p", "room_id": 
+"RM_9UDCqmsE5T4N", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:34:41.766 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_5tnk7syw252A", 
+"dispatch_id": "AD_9XAnKDxMnF44", "room": "room_i6zw4p", "room_id": 
+"RM_9UDCqmsE5T4N", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:34:44.315 WARNING  livekit.agents     assignment for job                
+                                             AJ_5tnk7syw252A timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E39810>", "agent_name": 
+"outbound-caller"}
+    14:34:44.328 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E39810>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:34:49.296 WARNING  livekit.agents     assignment for job                
+                                             AJ_5tnk7syw252A timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E39450>", "agent_name": 
+"outbound-caller"}
+    14:34:49.307 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E39450>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:36:42.663 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_7oCKBfymrgeE", 
+"dispatch_id": "AD_R6Lo8oCPWodW", "room": "room_3ikbch", "room_id": 
+"RM_iqLaKVvP4ga8", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:36:47.638 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_7oCKBfymrgeE", 
+"dispatch_id": "AD_R6Lo8oCPWodW", "room": "room_3ikbch", "room_id": 
+"RM_iqLaKVvP4ga8", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:36:50.176 WARNING  livekit.agents     assignment for job                
+                                             AJ_7oCKBfymrgeE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E2D220>", "agent_name": 
+"outbound-caller"}
+    14:36:50.193 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E2D220>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:36:54.645 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_7oCKBfymrgeE", 
+"dispatch_id": "AD_R6Lo8oCPWodW", "room": "room_3ikbch", "room_id": 
+"RM_iqLaKVvP4ga8", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:36:55.160 WARNING  livekit.agents     assignment for job                
+                                             AJ_7oCKBfymrgeE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x00000271948110F0>", "agent_name": 
+"outbound-caller"}
+    14:36:55.181 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x00000271948110F0>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:37:02.157 WARNING  livekit.agents     assignment for job                
+                                             AJ_7oCKBfymrgeE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191CB7770>", "agent_name": 
+"outbound-caller"}
+    14:37:02.188 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191CB7770>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:37:07.650 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_7oCKBfymrgeE", 
+"dispatch_id": "AD_R6Lo8oCPWodW", "room": "room_3ikbch", "room_id": 
+"RM_iqLaKVvP4ga8", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:37:12.705 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_7oCKBfymrgeE", 
+"dispatch_id": "AD_R6Lo8oCPWodW", "room": "room_3ikbch", "room_id": 
+"RM_iqLaKVvP4ga8", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:37:15.176 WARNING  livekit.agents     assignment for job                
+                                             AJ_7oCKBfymrgeE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191DCA8B0>", "agent_name": 
+"outbound-caller"}
+    14:37:15.218 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191DCA8B0>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:37:19.643 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_7oCKBfymrgeE", 
+"dispatch_id": "AD_R6Lo8oCPWodW", "room": "room_3ikbch", "room_id": 
+"RM_iqLaKVvP4ga8", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:37:20.215 WARNING  livekit.agents     assignment for job                
+                                             AJ_7oCKBfymrgeE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x000002719478F350>", "agent_name": 
+"outbound-caller"}
+    14:37:20.234 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x000002719478F350>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:37:27.166 WARNING  livekit.agents     assignment for job                
+                                             AJ_7oCKBfymrgeE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191DEA550>", "agent_name": 
+"outbound-caller"}
+    14:37:27.177 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191DEA550>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:37:32.648 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_7oCKBfymrgeE", 
+"dispatch_id": "AD_R6Lo8oCPWodW", "room": "room_3ikbch", "room_id": 
+"RM_iqLaKVvP4ga8", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:37:37.655 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_7oCKBfymrgeE", 
+"dispatch_id": "AD_R6Lo8oCPWodW", "room": "room_3ikbch", "room_id": 
+"RM_iqLaKVvP4ga8", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:37:40.169 WARNING  livekit.agents     assignment for job                
+                                             AJ_7oCKBfymrgeE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191DE9F50>", "agent_name": 
+"outbound-caller"}
+    14:37:40.187 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191DE9F50>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:37:44.648 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_7oCKBfymrgeE", 
+"dispatch_id": "AD_R6Lo8oCPWodW", "room": "room_3ikbch", "room_id": 
+"RM_iqLaKVvP4ga8", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:37:45.191 WARNING  livekit.agents     assignment for job                
+                                             AJ_7oCKBfymrgeE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E17110>", "agent_name": 
+"outbound-caller"}
+    14:37:45.233 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E17110>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:37:49.059 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_tdEE7rqtkNxy", 
+"dispatch_id": "AD_EToiTPr4q2Ee", "room": "room_4gteeo", "room_id": 
+"RM_FKryuWcsahE3", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:37:49.123 DEBUG    livekit.agents     received assignment  
+                                         {"agent_name": "outbound-caller", 
+"room_id": "RM_FKryuWcsahE3", "room": "room_4gteeo", "job_id": 
+"AJ_tdEE7rqtkNxy", "dispatch_id": "AD_EToiTPr4q2Ee", "enable_recording": true}
+    14:37:49.127 WARNING  livekit.agents     no warmed process available for   
+                                             job, waiting for one to be        
+                                             created                           
+                                         {"job_id": "AJ_tdEE7rqtkNxy"}
+    14:37:49.132 INFO     livekit.agents     initializing job runner  
+                                         {"tid": 11684}
+    14:37:49.138 DEBUG    asyncio            Using proactor: IocpProactor  
+                 INFO     livekit.agents     job runner initialized  
+                                         {"tid": 11684, "elapsed_time": 0.0}
+    14:37:49.159 INFO     voice-agent        Connecting to room: room_4gteeo  
+    14:37:49.816 INFO     voice-agent        Connected to room successfully  
+    14:37:50.114 INFO     voice-agent        Using Groq LLM  
+    14:37:51.281 INFO     voice-agent        Using Deepgram TTS (Model:        
+                                             aura-2-andromeda-en)              
+    14:37:51.290 INFO     voice-agent        Agent session initialized  
+    14:37:51.293 DEBUG    livekit.agents     configuring session recording  
+    14:37:51.301 WARNING  livekit.agents     RoomInputOptions and              
+                                             RoomOutputOptions are             
+                                             deprecated, use RoomOptions       
+                                             instead                           
+    14:37:51.310 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:37:51.315 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:37:51.319 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:37:51.328 INFO     livekit.agents     adaptive interruption detector    
+                                             initialized                       
+                                         {"base_url": 
+"https://agent-gateway.livekit.cloud/v1", "detection_interval": 0.1, 
+"audio_prefix_duration": 1.0, "max_audio_duration": 3, "min_frames": 2, 
+"threshold": 0.5, "inference_timeout": 0.7, "use_proxy": true}
+    14:37:51.359 DEBUG    livekit.agents     http_session(): creating a new    
+                                             httpclient ctx                    
+    14:37:51.371 ERROR    livekit.agents     Error in _stt_pump  
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\voice\audio_recognition.py", line 115, in _stt_pump
+    async for ev in node:
+    ...<3 lines>...
+        self._event_ch.send_nowait(ev)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\voice\agent.py", line 407, in stt_node
+    async with wrapped_stt.stream(conn_options=conn_options) as stream:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\deepgram\stt.py", line 269, in stream
+    stream = SpeechStream(
+        stt=self,
+    ...<4 lines>...
+        base_url=self._opts.endpoint_url,
+    )
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\deepgram\stt.py", line 395, in __init__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: language detection is not supported in streaming mode, please 
+disable it and specify a language
+    14:37:51.437 DEBUG    livekit.agents     using audio io: `RoomIO` ->       
+                                             `RecorderIO` -> `AgentSession`    
+                                             -> `RecorderIO` ->                
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:37:51.450 DEBUG    livekit.agents     using transcript io:              
+                                             `AgentSession` ->                 
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:37:51.468 INFO     voice-agent        Session started  
+    14:37:51.473 INFO     voice-agent        Agent is now active and           
+                                             listening.                        
+    14:37:51.498 DEBUG    livekit.agents     start reading stream  
+                                         {"participant": 
+"user_84662399-8715-49bb-a316-ce31de31fe84", "source": "SOURCE_MICROPHONE"}
+    14:37:52.169 WARNING  livekit.agents     assignment for job                
+                                             AJ_7oCKBfymrgeE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E168A0>", "agent_name": 
+"outbound-caller"}
+    14:37:52.201 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x0000027191E168A0>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:37:52.503 DEBUG    livekit.….deepgram Established new Deepgram TTS      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df23e-ceae-77e3-b53c-12cbcd3834e2", "Date": "Mon, 04 May 2026 09:08:15 
+GMT"}}
+    14:37:55.936 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 2.0}
+    14:37:55.948 DEBUG    livekit.agents     aec warmup active, disabling      
+                                             interruptions for 3.00s           
+    14:37:56.513 DEBUG    livekit.agents     interruption detected  
+                                         {"total_duration": 0.2716583, 
+"prediction_duration": 0.007009058, "detection_delay": 0.42940473556518555, 
+"probability": 0.8273851871490479}
+    14:37:58.237 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:37:58.258 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:37:58.271 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:37:58.962 DEBUG    livekit.agents     aec warmup expired, re-enabling   
+                                             interruptions                     
+    14:39:25.398 INFO     livekit.agents     closing agent session due to      
+                                             participant disconnect (disable   
+                                             via                               
+                                             `RoomInputOptions.close_on_disc…  
+                                         {"room": "room_4gteeo", "participant":
+"user_84662399-8715-49bb-a316-ce31de31fe84", "reason": "CLIENT_INITIATED"}
+    14:39:25.422 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": 
+"user_84662399-8715-49bb-a316-ce31de31fe84", "source": "SOURCE_UNKNOWN", 
+"accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:39:25.433 DEBUG    livekit.agents     stream closed  
+                                         {"participant": 
+"user_84662399-8715-49bb-a316-ce31de31fe84", "source": "SOURCE_MICROPHONE"}
+    14:39:27.468 DEBUG    livekit.agents     session closed  
+                                         {"reason": "participant_disconnected",
+"error": null}
+    14:39:29.688 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:39:29.706 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:39:29.718 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:39:34.226 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_5iDgdB8CarK6", 
+"dispatch_id": "AD_LVPhENYMH4z3", "room": "room_zvalp", "room_id": 
+"RM_LgXZXDQXx5T9", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:39:34.298 DEBUG    livekit.agents     received assignment  
+                                         {"agent_name": "outbound-caller", 
+"room_id": "RM_LgXZXDQXx5T9", "room": "room_zvalp", "job_id": 
+"AJ_5iDgdB8CarK6", "dispatch_id": "AD_LVPhENYMH4z3", "enable_recording": true}
+    14:39:34.310 WARNING  livekit.agents     no warmed process available for   
+                                             job, waiting for one to be        
+                                             created                           
+                                         {"job_id": "AJ_5iDgdB8CarK6"}
+    14:39:34.336 INFO     livekit.agents     initializing job runner  
+                                         {"tid": 12092}
+    14:39:34.348 DEBUG    asyncio            Using proactor: IocpProactor  
+                 INFO     livekit.agents     job runner initialized  
+                                         {"tid": 12092, "elapsed_time": 0.0}
+    14:39:34.372 INFO     voice-agent        Connecting to room: room_zvalp  
+    14:39:34.973 INFO     voice-agent        Connected to room successfully  
+    14:39:35.279 INFO     voice-agent        Using Groq LLM  
+    14:39:36.050 INFO     voice-agent        Using Deepgram TTS (Model:        
+                                             aura-2-andromeda-en)              
+    14:39:36.061 INFO     voice-agent        Agent session initialized  
+    14:39:36.065 DEBUG    livekit.agents     configuring session recording  
+    14:39:36.071 WARNING  livekit.agents     RoomInputOptions and              
+                                             RoomOutputOptions are             
+                                             deprecated, use RoomOptions       
+                                             instead                           
+    14:39:36.083 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:39:36.089 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:39:36.097 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:39:36.104 INFO     livekit.agents     adaptive interruption detector    
+                                             initialized                       
+                                         {"base_url": 
+"https://agent-gateway.livekit.cloud/v1", "detection_interval": 0.1, 
+"audio_prefix_duration": 1.0, "max_audio_duration": 3, "min_frames": 2, 
+"threshold": 0.5, "inference_timeout": 0.7, "use_proxy": true}
+    14:39:36.119 DEBUG    livekit.agents     http_session(): creating a new    
+                                             httpclient ctx                    
+    14:39:36.129 ERROR    livekit.agents     Error in _stt_pump  
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\voice\audio_recognition.py", line 115, in _stt_pump
+    async for ev in node:
+    ...<3 lines>...
+        self._event_ch.send_nowait(ev)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\voice\agent.py", line 407, in stt_node
+    async with wrapped_stt.stream(conn_options=conn_options) as stream:
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\deepgram\stt.py", line 269, in stream
+    stream = SpeechStream(
+        stt=self,
+    ...<4 lines>...
+        base_url=self._opts.endpoint_url,
+    )
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\deepgram\stt.py", line 395, in __init__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: language detection is not supported in streaming mode, please 
+disable it and specify a language
+    14:39:36.155 DEBUG    livekit.agents     start reading stream  
+                                         {"participant": 
+"user_2057cf54-23c8-4d70-9115-994bd7618749", "source": "SOURCE_MICROPHONE"}
+    14:39:36.162 DEBUG    livekit.agents     using audio io: `RoomIO` ->       
+                                             `RecorderIO` -> `AgentSession`    
+                                             -> `RecorderIO` ->                
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:39:36.173 DEBUG    livekit.agents     using transcript io:              
+                                             `AgentSession` ->                 
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:39:36.187 INFO     voice-agent        Session started  
+    14:39:36.191 INFO     voice-agent        Agent is now active and           
+                                             listening.                        
+    14:39:37.263 DEBUG    livekit.….deepgram Established new Deepgram TTS      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df240-67c7-74a1-9151-b5c479a03e55", "Date": "Mon, 04 May 2026 09:10:00 
+GMT"}}
+    14:39:40.922 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 2.0}
+    14:39:40.938 DEBUG    livekit.agents     aec warmup active, disabling      
+                                             interruptions for 3.00s           
+    14:39:43.945 DEBUG    livekit.agents     aec warmup expired, re-enabling   
+                                             interruptions                     
+    14:39:46.625 INFO     livekit.agents     closing agent session due to      
+                                             participant disconnect (disable   
+                                             via                               
+                                             `RoomInputOptions.close_on_disc…  
+                                         {"room": "room_zvalp", "participant": 
+"user_2057cf54-23c8-4d70-9115-994bd7618749", "reason": "CLIENT_INITIATED"}
+    14:39:46.660 DEBUG    livekit.agents     stream closed  
+                                         {"participant": 
+"user_2057cf54-23c8-4d70-9115-994bd7618749", "source": "SOURCE_MICROPHONE"}
+    14:39:46.700 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": 
+"user_2057cf54-23c8-4d70-9115-994bd7618749", "source": "SOURCE_UNKNOWN", 
+"accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:39:46.721 DEBUG    livekit.agents     uploading session report to       
+                                             LiveKit Cloud                     
+    14:39:48.769 DEBUG    livekit.agents     session closed  
+                                         {"reason": "participant_disconnected",
+"error": null}
+    14:39:50.416 DEBUG    livekit.agents     finished uploading  
+    14:39:50.423 DEBUG    livekit.agents     shutting down job task  
+                                         {"reason": "room disconnected", 
+"user_initiated": false}
+    14:39:50.429 DEBUG    livekit.agents     job exiting  
+                                         {"reason": "room disconnected", "tid":
+11684, "job_id": "AJ_tdEE7rqtkNxy", "room_id": "RM_FKryuWcsahE3"}
+    14:39:50.437 WARNING  opentele…_internal shutdown can only be called once  
+    14:39:51.708 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:39:51.719 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:39:51.725 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:39:51.749 DEBUG    livekit.agents     http_session(): closing the       
+                                             httpclient ctx                    
+    14:40:11.012 DEBUG    livekit.agents     uploading session report to       
+                                             LiveKit Cloud                     
+    14:40:12.635 DEBUG    livekit.agents     finished uploading  
+    14:40:12.646 DEBUG    livekit.agents     shutting down job task  
+                                         {"reason": "", "user_initiated": 
+false}
+    14:40:12.652 DEBUG    livekit.agents     job exiting  
+                                         {"reason": "", "tid": 12092, "job_id":
+"AJ_5iDgdB8CarK6", "room_id": "RM_LgXZXDQXx5T9"}
+    14:40:12.656 WARNING  opentele…_internal shutdown can only be called once  
+    14:40:12.662 DEBUG    livekit.agents     http_session(): closing the       
+                                             httpclient ctx                    
+    14:42:21.211 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_3qpVTEMkGUsE", 
+"dispatch_id": "AD_hTd74komVUGS", "room": "room_zo6y1h", "room_id": 
+"RM_AqpBwVhm4E3X", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:42:28.724 WARNING  livekit.agents     assignment for job                
+                                             AJ_3qpVTEMkGUsE timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x000002718F91AF70>", "agent_name": 
+"outbound-caller"}
+    14:42:28.735 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x000002718F91AF70>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:42:40.279 WARNING  livekit.agents     failed to connect to livekit,     
+                                             retrying in 0s                    
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1085, in _connection_task
+    await self._run_ws(ws)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1167, in _run_ws
+    await asyncio.gather(*tasks)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1139, in _recv_task
+    raise Exception("worker connection closed unexpectedly")
+Exception: worker connection closed unexpectedly
+    14:42:40.299 WARNING  livekit.agents     failed to connect to livekit,     
+                                             retrying in 2s                    
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1574, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1190, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1221, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_eve
+nts.py", line 936, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futur
+es\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futur
+es\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line
+983, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1042, in _connection_task
+    ws = await self._http_session.ws_connect(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 1087, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 788, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 742, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1251, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1580, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host 
+ai-ol2pplrk.livekit.cloud:443 ssl:default [getaddrinfo failed]
+    14:42:42.703 INFO     livekit.agents     registered worker  
+                                         {"agent_name": "outbound-caller", 
+"id": "AW_Fp6YPh5Cc5Eg", "url": "wss://ai-ol2pplrk.livekit.cloud", "region": 
+"India South", "protocol": 17}

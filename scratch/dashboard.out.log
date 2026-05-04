@@ -1,0 +1,64 @@
+
+> dashboard@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+- Environments: .env
+
+✓ Starting...
+✓ Ready in 1510ms
+ GET / 200 in 3.1s (compile: 2.8s, render: 348ms)
+ GET / 200 in 91ms (compile: 8ms, render: 83ms)
+ GET /api/token?room=room_bhxgts&identity=user_cf478ff2-8722-4d60-b17e-4d463c870256 200 in 3.1s (compile: 272ms, render: 2.8s)
+ GET / 200 in 96ms (compile: 9ms, render: 87ms)
+ GET /api/token?room=room_987w9n&identity=user_f798c365-fdf2-44c2-b221-7f0bd805cefb 200 in 2.1s (compile: 7ms, render: 2.1s)
+ GET / 200 in 54ms (compile: 6ms, render: 48ms)
+✓ Compiled in 60ms
+ GET / 200 in 148ms (compile: 81ms, render: 67ms)
+ GET / 200 in 147ms (compile: 118ms, render: 30ms)
+ GET / 200 in 139ms (compile: 115ms, render: 24ms)
+ GET / 200 in 146ms (compile: 69ms, render: 77ms)
+ GET / 200 in 133ms (compile: 62ms, render: 70ms)
+ GET / 200 in 138ms (compile: 96ms, render: 42ms)
+ GET / 200 in 224ms (compile: 4ms, render: 220ms)
+ GET / 200 in 141ms (compile: 8ms, render: 133ms)
+ GET /api/token?room=room_1zc98h&identity=user_5313614f-f302-4c48-853c-a04ade030446 200 in 4.4s (compile: 3ms, render: 4.4s)
+ GET / 200 in 125ms (compile: 7ms, render: 118ms)
+ GET / 200 in 36ms (compile: 3ms, render: 33ms)
+ GET / 200 in 99ms (compile: 6ms, render: 92ms)
+ GET /api/token?room=room_a1bcui&identity=user_bec4e19c-27b2-4fba-a748-d2078841147a 200 in 2.2s (compile: 4ms, render: 2.2s)
+  Reload env: .env
+ GET / 200 in 219ms (compile: 94ms, render: 124ms)
+ GET / 200 in 70ms (compile: 5ms, render: 66ms)
+ GET / 200 in 228ms (compile: 101ms, render: 127ms)
+ GET / 200 in 72ms (compile: 6ms, render: 67ms)
+ GET / 200 in 187ms (compile: 5ms, render: 182ms)
+ GET / 200 in 46ms (compile: 3ms, render: 43ms)
+ GET / 200 in 46ms (compile: 5ms, render: 41ms)
+ GET / 200 in 31ms (compile: 3ms, render: 28ms)
+ GET / 200 in 195ms (compile: 7ms, render: 189ms)
+ GET /api/token?room=room_i6zw4p&identity=user_71550e30-4e6f-4c2b-9bf6-00c18b9ab21e 200 in 3.4s (compile: 126ms, render: 3.3s)
+ GET / 200 in 130ms (compile: 7ms, render: 123ms)
+ GET /api/token?room=room_3ikbch&identity=user_d97aa292-f326-4010-a380-791b79b383ac 200 in 4.1s (compile: 4ms, render: 4.1s)
+ GET / 200 in 68ms (compile: 3ms, render: 64ms)
+ GET / 200 in 109ms (compile: 6ms, render: 103ms)
+ GET /api/token?room=room_4gteeo&identity=user_84662399-8715-49bb-a316-ce31de31fe84 200 in 3.6s (compile: 8ms, render: 3.6s)
+ GET / 200 in 106ms (compile: 6ms, render: 99ms)
+ GET / 200 in 90ms (compile: 4ms, render: 86ms)
+ GET /api/token?room=room_zvalp&identity=user_2057cf54-23c8-4d70-9115-994bd7618749 200 in 1798ms (compile: 4ms, render: 1794ms)
+ GET / 200 in 141ms (compile: 9ms, render: 132ms)
+ GET /api/token?room=room_uz1g09&identity=user_c4f2db4e-c781-46db-9431-ae853e19de7c 200 in 1692ms (compile: 6ms, render: 1687ms)
+ GET / 200 in 47ms (compile: 4ms, render: 42ms)
+ GET /api/token?room=room_zo6y1h&identity=user_50e6c2a7-33db-472b-bddb-1e6ccdd94e80 200 in 2.0s (compile: 3ms, render: 2.0s)
+ GET / 200 in 65ms (compile: 5ms, render: 60ms)
+ GET /api/token?room=room_644lf&identity=user_b5a48f68-6106-4200-80a1-57c0f3982757 200 in 1809ms (compile: 3ms, render: 1806ms)
+ GET / 200 in 56ms (compile: 5ms, render: 50ms)
+ GET /api/token?room=room_7nhje&identity=user_584da909-1c4d-45f6-98b0-3cf01c87a731 200 in 2.4s (compile: 5ms, render: 2.4s)
+ GET / 200 in 79ms (compile: 7ms, render: 72ms)
+ GET / 200 in 97ms (compile: 8ms, render: 88ms)
+ GET /api/token?room=room_rgg1dj&identity=user_792d7bc0-9f55-4254-b188-a6cbea170e0b 200 in 2.9s (compile: 5ms, render: 2.9s)
+ GET / 200 in 334ms (compile: 20ms, render: 314ms)
+ GET /api/token?room=room_9avfg6&identity=user_6a608a0e-e069-4356-bb18-bc15b0065a5d 200 in 3.3s (compile: 10ms, render: 3.3s)
+ GET / 200 in 137ms (compile: 11ms, render: 126ms)

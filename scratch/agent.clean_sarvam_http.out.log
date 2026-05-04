@@ -1,0 +1,718 @@
+    14:45:28.983 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:45:29.009 DEV      livekit.agents     Watching                          
+                                             D:\AI\LIvekitAIVoice-main\LIvek…  
+    14:45:31.823 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:45:31.860 INFO     livekit.agents     starting worker  
+                                         {"version": "1.5.7", "rtc-version": 
+"1.1.7"}
+    14:45:31.896 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.openai", 
+"version": "1.5.7"}
+    14:45:31.934 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.cartesia",
+"version": "1.5.7"}
+    14:45:31.954 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.deepgram",
+"version": "1.5.7"}
+    14:45:31.959 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.silero", 
+"version": "1.5.7"}
+    14:45:31.965 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.sarvam", 
+"version": "1.5.7"}
+    14:45:31.978 INFO     livekit.agents     HTTP server listening on :54682  
+    14:45:32.096 INFO     livekit.agents     registered worker  
+                                         {"agent_name": "outbound-caller", 
+"id": "AW_88V9rofXu8oA", "url": "wss://ai-ol2pplrk.livekit.cloud", "region": 
+"India South", "protocol": 17}
+    14:45:39.826 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_RJYwDLexSAKg", 
+"dispatch_id": "AD_37NGXQQDkbDv", "room": "room_rgg1dj", "room_id": 
+"RM_pXnrKdeSq5YB", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:45:44.827 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_RJYwDLexSAKg", 
+"dispatch_id": "AD_37NGXQQDkbDv", "room": "room_rgg1dj", "room_id": 
+"RM_pXnrKdeSq5YB", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:45:44.835 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_RJYwDLexSAKg", 
+"dispatch_id": "AD_37NGXQQDkbDv", "room": "room_rgg1dj", "room_id": 
+"RM_pXnrKdeSq5YB", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:45:44.872 DEBUG    livekit.agents     received assignment  
+                                         {"agent_name": "outbound-caller", 
+"room_id": "RM_pXnrKdeSq5YB", "room": "room_rgg1dj", "job_id": 
+"AJ_RJYwDLexSAKg", "dispatch_id": "AD_37NGXQQDkbDv", "enable_recording": true}
+    14:45:44.881 WARNING  livekit.agents     no warmed process available for   
+                                             job, waiting for one to be        
+                                             created                           
+                                         {"job_id": "AJ_RJYwDLexSAKg"}
+    14:45:44.901 INFO     livekit.agents     initializing job runner  
+                                         {"tid": 7532}
+    14:45:44.907 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:45:44.909 INFO     livekit.agents     job runner initialized  
+                                         {"tid": 7532, "elapsed_time": 0.0}
+    14:45:44.921 INFO     voice-agent        Connecting to room: room_rgg1dj  
+    14:45:45.437 INFO     voice-agent        Connected to room successfully  
+    14:45:45.692 INFO     voice-agent        Using Groq LLM  
+    14:45:46.539 INFO     voice-agent        Using Sarvam TTS (Voice:          
+                                             anushka)                          
+    14:45:46.546 INFO     voice-agent        Agent session initialized  
+    14:45:46.556 DEBUG    livekit.agents     configuring session recording  
+    14:45:46.582 WARNING  livekit.agents     RoomInputOptions and              
+                                             RoomOutputOptions are             
+                                             deprecated, use RoomOptions       
+                                             instead                           
+    14:45:46.594 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:45:46.602 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:45:46.609 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:45:46.616 INFO     livekit.agents     adaptive interruption detector    
+                                             initialized                       
+                                         {"base_url": 
+"https://agent-gateway.livekit.cloud/v1", "detection_interval": 0.1, 
+"audio_prefix_duration": 1.0, "max_audio_duration": 3, "min_frames": 2, 
+"threshold": 0.5, "inference_timeout": 0.7, "use_proxy": true}
+    14:45:46.632 DEBUG    livekit.agents     http_session(): creating a new    
+                                             httpclient ctx                    
+    14:45:46.643 INFO     livekit.…arvam.log Connecting to Sarvam TTS          
+                                             WebSocket                         
+    14:45:46.666 DEBUG    livekit.agents     using audio io: `RoomIO` ->       
+                                             `RecorderIO` -> `AgentSession`    
+                                             -> `RecorderIO` ->                
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:45:46.685 DEBUG    livekit.agents     using transcript io:              
+                                             `AgentSession` ->                 
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:45:46.699 INFO     voice-agent        Session started  
+    14:45:46.703 INFO     voice-agent        Agent is now active and           
+                                             listening.                        
+    14:45:47.004 DEBUG    livekit.agents     start reading stream  
+                                         {"participant": 
+"user_792d7bc0-9f55-4254-b188-a6cbea170e0b", "source": "SOURCE_MICROPHONE"}
+    14:45:47.355 WARNING  livekit.agents     assignment for job                
+                                             AJ_RJYwDLexSAKg timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x000002A9C38CD400>", "agent_name": 
+"outbound-caller"}
+    14:45:47.366 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x000002A9C38CD400>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:45:48.003 DEBUG    livekit.….deepgram Established new Deepgram STT      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df246-1023-7470-8a6c-15c04571a980", "Date": "Mon, 04 May 2026 09:16:11 
+GMT"}}
+    14:45:52.352 WARNING  livekit.agents     assignment for job                
+                                             AJ_RJYwDLexSAKg timed out         
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x000002A9C38B9310>", "agent_name": 
+"outbound-caller"}
+    14:45:52.368 ERROR    livekit.agents     job_request_fnc failed  
+                                         {"job_request": 
+"<livekit.agents.job.JobRequest object at 0x000002A9C38B9310>", "agent_name": 
+"outbound-caller"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1353, in _job_request_task
+    await self._request_fnc(job_req)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 70, in _default_request_fnc
+    await ctx.accept()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\job.py", line 840, in accept
+    await self._on_accept(accept_arguments)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\worker.py", line 1320, in _on_accept
+    raise AssignmentTimeoutError() from None
+livekit.agents._exceptions.AssignmentTimeoutError
+    14:45:56.661 ERROR    livekit.…arvam.log Failed to connect to Sarvam TTS   
+                                             WebSocket                         
+                                           {"error": "", "url": 
+"wss://api.sarvam.ai/text-to-speech/ws?model=bulbul:v2&send_completion_event=Tr
+ue"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py
+", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 1087, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 788, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 742, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1251, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1592, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1325, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_eve
+nts.py", line 1198, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ssl_shutdown_timeout=ssl_shutdown_timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_eve
+nts.py", line 1231, in _create_connection_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\sarvam\tts.py", line 489, in _connect_ws
+    return await asyncio.wait_for(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py
+", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\timeouts
+.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+    14:45:57.927 WARNING  livekit.agents     failed to synthesize speech:      
+                                             Sarvam TTS API request timed      
+                                             out, retrying in 0.1s             
+                                         {"tts": 
+"livekit.plugins.sarvam.tts.TTS", "attempt": 1, "streamed": false}
+    14:46:08.927 WARNING  livekit.agents     failed to synthesize speech:      
+                                             Sarvam TTS API request timed      
+                                             out, retrying in 2.0s             
+                                         {"tts": 
+"livekit.plugins.sarvam.tts.TTS", "attempt": 2, "streamed": false}
+    14:46:14.332 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:46:14.354 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:46:14.370 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:46:17.617 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:46:17.626 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:46:17.636 ERROR    opentele…_exporter Failed to export metrics batch    
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:46:18.883 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_tywi8PURphER", 
+"dispatch_id": "AD_8bKY5Mkzadno", "room": "room_9avfg6", "room_id": 
+"RM_jfxA9S65u5Me", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    14:46:18.906 DEBUG    livekit.agents     received assignment  
+                                         {"agent_name": "outbound-caller", 
+"room_id": "RM_jfxA9S65u5Me", "room": "room_9avfg6", "job_id": 
+"AJ_tywi8PURphER", "dispatch_id": "AD_8bKY5Mkzadno", "enable_recording": true}
+    14:46:18.915 WARNING  livekit.agents     no warmed process available for   
+                                             job, waiting for one to be        
+                                             created                           
+                                         {"job_id": "AJ_tywi8PURphER"}
+    14:46:18.928 INFO     livekit.agents     initializing job runner  
+                                         {"tid": 11416}
+    14:46:18.934 DEBUG    asyncio            Using proactor: IocpProactor  
+                 INFO     livekit.agents     job runner initialized  
+                                         {"tid": 11416, "elapsed_time": 0.0}
+    14:46:18.947 INFO     voice-agent        Connecting to room: room_9avfg6  
+    14:46:19.272 INFO     voice-agent        Connected to room successfully  
+    14:46:19.521 INFO     voice-agent        Using Groq LLM  
+    14:46:20.191 INFO     voice-agent        Using Sarvam TTS (Voice:          
+                                             anushka)                          
+    14:46:20.209 INFO     voice-agent        Agent session initialized  
+    14:46:20.215 DEBUG    livekit.agents     configuring session recording  
+    14:46:20.230 WARNING  livekit.agents     RoomInputOptions and              
+                                             RoomOutputOptions are             
+                                             deprecated, use RoomOptions       
+                                             instead                           
+    14:46:20.248 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:46:20.262 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:46:20.275 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    14:46:20.292 INFO     livekit.agents     adaptive interruption detector    
+                                             initialized                       
+                                         {"base_url": 
+"https://agent-gateway.livekit.cloud/v1", "detection_interval": 0.1, 
+"audio_prefix_duration": 1.0, "max_audio_duration": 3, "min_frames": 2, 
+"threshold": 0.5, "inference_timeout": 0.7, "use_proxy": true}
+    14:46:20.310 DEBUG    livekit.agents     http_session(): creating a new    
+                                             httpclient ctx                    
+    14:46:20.318 INFO     livekit.…arvam.log Connecting to Sarvam TTS          
+                                             WebSocket                         
+    14:46:20.329 DEBUG    livekit.agents     start reading stream  
+                                         {"participant": 
+"user_6a608a0e-e069-4356-bb18-bc15b0065a5d", "source": "SOURCE_MICROPHONE"}
+    14:46:20.336 DEBUG    livekit.agents     using audio io: `RoomIO` ->       
+                                             `RecorderIO` -> `AgentSession`    
+                                             -> `RecorderIO` ->                
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:46:20.347 DEBUG    livekit.agents     using transcript io:              
+                                             `AgentSession` ->                 
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    14:46:20.359 INFO     voice-agent        Session started  
+    14:46:20.363 INFO     voice-agent        Agent is now active and           
+                                             listening.                        
+    14:46:20.561 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:46:20.574 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:46:20.593 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:46:21.426 DEBUG    livekit.….deepgram Established new Deepgram STT      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df246-92b1-7620-b6b2-741d5bec5964", "Date": "Mon, 04 May 2026 09:16:44 
+GMT"}}
+    14:46:21.943 WARNING  livekit.agents     failed to synthesize speech:      
+                                             Sarvam TTS API request timed      
+                                             out, retrying in 2.0s             
+                                         {"tts": 
+"livekit.plugins.sarvam.tts.TTS", "attempt": 3, "streamed": false}
+    14:46:23.670 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 2.0}
+    14:46:26.662 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:46:26.686 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:46:30.325 ERROR    livekit.…arvam.log Failed to connect to Sarvam TTS   
+                                             WebSocket                         
+                                           {"error": "", "url": 
+"wss://api.sarvam.ai/text-to-speech/ws?model=bulbul:v2&send_completion_event=Tr
+ue"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py
+", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 1087, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 788, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 742, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1251, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1592, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1325, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_eve
+nts.py", line 1198, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ssl_shutdown_timeout=ssl_shutdown_timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_eve
+nts.py", line 1231, in _create_connection_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\sarvam\tts.py", line 489, in _connect_ws
+    return await asyncio.wait_for(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py
+", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\timeouts
+.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+    14:46:31.925 WARNING  livekit.agents     failed to synthesize speech:      
+                                             Sarvam TTS API request timed      
+                                             out, retrying in 0.1s             
+                                         {"tts": 
+"livekit.plugins.sarvam.tts.TTS", "attempt": 1, "streamed": false}
+    14:46:32.293 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:46:32.304 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:46:34.977 ERROR    livekit.agents     Error in _tts_inference_task  
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 788, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 742, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1251, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1592, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1325, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_eve
+nts.py", line 1198, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ssl_shutdown_timeout=ssl_shutdown_timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_eve
+nts.py", line 1231, in _create_connection_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\sarvam\tts.py", line 704, in _run
+    async with self._tts._ensure_session().post(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        url=self._opts.base_url,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        ),
+        ^^
+    ) as res:
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 1521, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 632, in _request
+    with timer:
+         ^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\helpers.py", line 713, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\voice\generation.py", line 328, in _tts_inference_task
+    pushed_duration += await _tts_node_inference(input_segment, 
+pushed_duration)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\op
+entelemetry\util\_decorator.py", line 71, in async_wrapper
+    return await func(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\voice\generation.py", line 284, in _tts_node_inference
+    async for audio_frame in tts_node:
+    ...<15 lines>...
+        audio_duration += audio_frame.duration
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\voice\agent.py", line 490, in tts_node
+    async for ev in stream:
+        yield ev.frame
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\tts\tts.py", line 693, in __anext__
+    raise exc  # noqa: B904
+    ^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\tts\tts.py", line 433, in _traceable_main_task
+    await self._main_task()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\tts\tts.py", line 479, in _main_task
+    await self._run(output_emitter)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\tts\stream_adapter.py", line 144, in _run
+    await asyncio.gather(*tasks)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\tts\stream_adapter.py", line 134, in _synthesize
+    async for audio in tts_stream:
+        output_emitter.push(audio.frame.data.tobytes())
+        duration += audio.frame.duration
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\tts\tts.py", line 355, in __anext__
+    raise exc  # noqa: B904
+    ^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\tts\tts.py", line 199, in _traceable_main_task
+    await self._main_task()
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\tts\tts.py", line 292, in _main_task
+    await self._run(output_emitter)
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\sarvam\tts.py", line 739, in _run
+    raise APITimeoutError("Sarvam TTS API request timed out") from e
+livekit.agents._exceptions.APITimeoutError: Sarvam TTS API request timed out
+    14:46:38.361 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:46:38.375 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:46:42.940 WARNING  livekit.agents     failed to synthesize speech:      
+                                             Sarvam TTS API request timed      
+                                             out, retrying in 2.0s             
+                                         {"tts": 
+"livekit.plugins.sarvam.tts.TTS", "attempt": 2, "streamed": false}
+    14:46:55.939 WARNING  livekit.agents     failed to synthesize speech:      
+                                             Sarvam TTS API request timed      
+                                             out, retrying in 2.0s             
+                                         {"tts": 
+"livekit.plugins.sarvam.tts.TTS", "attempt": 3, "streamed": false}
+    14:46:59.598 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    14:46:59.630 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    14:46:59.641 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    14:47:06.309 DEBUG    asyncio            Using proactor: IocpProactor  
+    14:47:06.327 INFO     livekit.agents     starting worker  
+                                         {"version": "1.5.7", "rtc-version": 
+"1.1.7"}
+    14:47:06.333 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.openai", 
+"version": "1.5.7"}
+    14:47:06.339 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.cartesia",
+"version": "1.5.7"}
+    14:47:06.345 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.deepgram",
+"version": "1.5.7"}
+    14:47:06.351 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.silero", 
+"version": "1.5.7"}
+    14:47:06.356 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.sarvam", 
+"version": "1.5.7"}
+    14:47:06.365 INFO     livekit.agents     HTTP server listening on :63679  
+    14:47:06.364 ERROR    livekit.agents     Error in _read_ipc_task  
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\aio\duplex_unix.py", line 35, in recv_bytes
+    len_bytes = await self._reader.readexactly(4)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\streams.
+py", line 767, in readexactly
+    raise exceptions.IncompleteReadError(incomplete, n)
+asyncio.exceptions.IncompleteReadError: 0 bytes read on a total of 4 expected 
+bytes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\log.py", line 17, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\cli\watcher.py", line 136, in _read_ipc_task
+    msg = await channel.arecv_message(self._pch, proto.IPC_MESSAGES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\ipc\channel.py", line 47, in arecv_message
+    return _read_message(await dplx.recv_bytes(), messages)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\agents\utils\aio\duplex_unix.py", line 43, in recv_bytes
+    raise DuplexClosed() from e
+livekit.agents.utils.aio.duplex_unix.DuplexClosed
+    14:47:06.494 INFO     livekit.agents     registered worker  
+                                         {"agent_name": "outbound-caller", 
+"id": "AW_bTTRZgEub7GN", "url": "wss://ai-ol2pplrk.livekit.cloud", "region": 
+"India South", "protocol": 17}

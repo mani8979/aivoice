@@ -1,0 +1,157 @@
+DEBUG:asyncio:Using proactor: IocpProactor
+DEV:livekit.agents:Watching D:\AI\LIvekitAIVoice-main\LIvekitAIVoice-main
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:starting worker
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:plugin registered
+INFO:livekit.agents:HTTP server listening on :52888
+INFO:livekit.agents:registered worker
+INFO:livekit.agents:received job request
+DEBUG:livekit.agents:received assignment
+WARNING:livekit.agents:no warmed process available for job, waiting for one to be created
+INFO:livekit.agents:initializing job runner
+DEBUG:asyncio:Using proactor: IocpProactor
+INFO:livekit.agents:job runner initialized
+INFO:voice-agent:Connecting to room: room_5ozwc
+INFO:voice-agent:Connected to room successfully
+INFO:voice-agent:Using Groq LLM
+INFO:voice-agent:Using Sarvam TTS (Voice: anushka)
+INFO:voice-agent:Agent session initialized
+DEBUG:livekit.agents:configuring session recording
+WARNING:livekit.agents:RoomInputOptions and RoomOutputOptions are deprecated, use RoomOptions instead
+DEBUG:livekit.agents:input stream attached
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:input stream attached
+INFO:livekit.agents:adaptive interruption detector initialized
+DEBUG:livekit.agents:http_session(): creating a new httpclient ctx
+INFO:livekit.plugins.sarvam.log:Connecting to Sarvam TTS WebSocket
+DEBUG:livekit.agents:start reading stream
+DEBUG:livekit.agents:using audio io: `RoomIO` -> `RecorderIO` -> `AgentSession` -> `RecorderIO` -> `TranscriptSynchronizer` -> `RoomIO`
+DEBUG:livekit.agents:using transcript io: `AgentSession` -> `TranscriptSynchronizer` -> `RoomIO`
+INFO:voice-agent:Session started
+INFO:voice-agent:Agent is now active and listening.
+DEBUG:livekit.plugins.deepgram:Established new Deepgram STT WebSocket connection:
+DEBUG:livekit.agents:received user transcript
+DEBUG:livekit.plugins.sarvam.log:Starting TTS stream cleanup
+DEBUG:livekit.plugins.sarvam.log:segments channel closed
+DEBUG:livekit.plugins.sarvam.log:input channel closed
+ERROR:livekit.plugins.sarvam.log:Failed to connect to Sarvam TTS WebSocket
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\client.py", line 1087, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\client.py", line 788, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\client.py", line 742, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\connector.py", line 1251, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\connector.py", line 1592, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\connector.py", line 1325, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 1198, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ssl_shutdown_timeout=ssl_shutdown_timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 1231, in _create_connection_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\livekit\plugins\sarvam\tts.py", line 489, in _connect_ws
+    return await asyncio.wait_for(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\timeouts.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:livekit.agents:resumed false interrupted speech
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http.metric_exporter:Failed to export metrics batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+INFO:livekit.agents:closing agent session due to participant disconnect (disable via `RoomInputOptions.close_on_disconnect=False`)
+DEBUG:livekit.agents:stream closed
+DEBUG:livekit.plugins.sarvam.log:Starting TTS stream cleanup
+DEBUG:livekit.plugins.sarvam.log:segments channel closed
+DEBUG:livekit.plugins.sarvam.log:input channel closed
+DEBUG:livekit.agents:input stream detached
+DEBUG:livekit.agents:session closed
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http.metric_exporter:Failed to export metrics batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:livekit.agents:uploading session report to LiveKit Cloud
+DEBUG:livekit.agents:finished uploading
+DEBUG:livekit.agents:shutting down job task
+DEBUG:livekit.agents:job exiting
+DEBUG:charset_normalizer:Encoding detection: utf_8 will be used as a fallback match
+DEBUG:charset_normalizer:Encoding detection: Found utf_8 as plausible (best-candidate) for content. With 0 alternatives.
+ERROR:opentelemetry.exporter.otlp.proto.http._log_exporter:Failed to export logs batch code: 429, reason: QuotaStatusNetworkError+
+)type.googleapis.com/google.rpc.BadRequest
+DEBUG:livekit.agents:http_session(): closing the httpclient ctx
+ERROR:livekit.agents:job shutdown is taking too much time..

@@ -1,0 +1,349 @@
+    13:41:52.538 DEBUG    asyncio            Using proactor: IocpProactor  
+    13:41:52.572 DEV      livekit.agents     Watching                          
+                                             D:\AI\LIvekitAIVoice-main\LIvek…  
+    13:41:54.577 DEBUG    asyncio            Using proactor: IocpProactor  
+    13:41:54.612 INFO     livekit.agents     starting worker  
+                                         {"version": "1.5.7", "rtc-version": 
+"1.1.7"}
+    13:41:54.647 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.openai", 
+"version": "1.5.7"}
+    13:41:54.684 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.cartesia",
+"version": "1.5.7"}
+    13:41:54.715 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.deepgram",
+"version": "1.5.7"}
+    13:41:54.721 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.silero", 
+"version": "1.5.7"}
+    13:41:54.727 INFO     livekit.agents     plugin registered  
+                                         {"plugin": "livekit.plugins.sarvam", 
+"version": "1.5.7"}
+    13:41:54.733 INFO     livekit.agents     HTTP server listening on :52888  
+    13:41:54.860 INFO     livekit.agents     registered worker  
+                                         {"agent_name": "outbound-caller", 
+"id": "AW_rbwHuDfAj9EA", "url": "wss://ai-ol2pplrk.livekit.cloud", "region": 
+"India South", "protocol": 17}
+    13:56:00.177 INFO     livekit.agents     received job request  
+                                         {"job_id": "AJ_mohbqpmXRekt", 
+"dispatch_id": "AD_YvfyFWpLaL6f", "room": "room_5ozwc", "room_id": 
+"RM_CUnZ8jby544t", "agent_name": "outbound-caller", "resuming": false, 
+"enable_recording": true}
+    13:56:00.205 DEBUG    livekit.agents     received assignment  
+                                         {"agent_name": "outbound-caller", 
+"room_id": "RM_CUnZ8jby544t", "room": "room_5ozwc", "job_id": 
+"AJ_mohbqpmXRekt", "dispatch_id": "AD_YvfyFWpLaL6f", "enable_recording": true}
+    13:56:00.211 WARNING  livekit.agents     no warmed process available for   
+                                             job, waiting for one to be        
+                                             created                           
+                                         {"job_id": "AJ_mohbqpmXRekt"}
+    13:56:00.222 INFO     livekit.agents     initializing job runner  
+                                         {"tid": 23100}
+    13:56:00.227 DEBUG    asyncio            Using proactor: IocpProactor  
+                 INFO     livekit.agents     job runner initialized  
+                                         {"tid": 23100, "elapsed_time": 0.0}
+    13:56:00.237 INFO     voice-agent        Connecting to room: room_5ozwc  
+    13:56:00.631 INFO     voice-agent        Connected to room successfully  
+    13:56:00.881 INFO     voice-agent        Using Groq LLM  
+    13:56:02.243 INFO     voice-agent        Using Sarvam TTS (Voice:          
+                                             anushka)                          
+    13:56:02.260 INFO     voice-agent        Agent session initialized  
+    13:56:02.269 DEBUG    livekit.agents     configuring session recording  
+    13:56:02.284 WARNING  livekit.agents     RoomInputOptions and              
+                                             RoomOutputOptions are             
+                                             deprecated, use RoomOptions       
+                                             instead                           
+    13:56:02.305 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    13:56:02.313 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    13:56:02.322 DEBUG    livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"]}
+    13:56:02.332 INFO     livekit.agents     adaptive interruption detector    
+                                             initialized                       
+                                         {"base_url": 
+"https://agent-gateway.livekit.cloud/v1", "detection_interval": 0.1, 
+"audio_prefix_duration": 1.0, "max_audio_duration": 3, "min_frames": 2, 
+"threshold": 0.5, "inference_timeout": 0.7, "use_proxy": true}
+    13:56:02.356 DEBUG    livekit.agents     http_session(): creating a new    
+                                             httpclient ctx                    
+    13:56:02.366 INFO     livekit.…arvam.log Connecting to Sarvam TTS          
+                                             WebSocket                         
+    13:56:02.388 DEBUG    livekit.agents     start reading stream  
+                                         {"participant": 
+"user_f046f60c-25d5-4a5c-9f28-d240ccac9d68", "source": "SOURCE_MICROPHONE"}
+    13:56:02.397 DEBUG    livekit.agents     using audio io: `RoomIO` ->       
+                                             `RecorderIO` -> `AgentSession`    
+                                             -> `RecorderIO` ->                
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    13:56:02.426 DEBUG    livekit.agents     using transcript io:              
+                                             `AgentSession` ->                 
+                                             `TranscriptSynchronizer` ->       
+                                             `RoomIO`                          
+    13:56:02.443 INFO     voice-agent        Session started  
+    13:56:02.447 INFO     voice-agent        Agent is now active and           
+                                             listening.                        
+    13:56:04.176 DEBUG    livekit.….deepgram Established new Deepgram STT      
+                                             WebSocket connection:             
+                                           {"headers": {"dg-project-id": 
+"eda8de1a-ca31-4e6c-9472-69d4f18183a6", "dg-request-id": 
+"019df218-8550-7c03-bfc2-4b533baa7d1b", "Date": "Mon, 04 May 2026 08:26:26 
+GMT"}}
+    13:56:05.746 DEBUG    livekit.agents     received user transcript  
+                                         {"user_transcript": "Hello?", 
+"language": "en", "transcript_delay": 1.3711352348327637}
+    13:56:05.762 DEBUG    livekit.…arvam.log Starting TTS stream cleanup  
+                                           {"session_id": 1837636742048, 
+"connection_state": "disconnected", "model": "bulbul:v2", "speaker": "anushka",
+"client_request_id": "35682b5fcb81", "server_request_id": null}
+    13:56:05.782 DEBUG    livekit.…arvam.log segments channel closed  
+                                           {"session_id": 1837636742048, 
+"connection_state": "disconnected", "model": "bulbul:v2", "speaker": "anushka",
+"client_request_id": "35682b5fcb81", "server_request_id": null}
+    13:56:05.791 DEBUG    livekit.…arvam.log input channel closed  
+                                           {"session_id": 1837636742048, 
+"connection_state": "disconnected", "model": "bulbul:v2", "speaker": "anushka",
+"client_request_id": "35682b5fcb81", "server_request_id": null}
+    13:56:12.380 ERROR    livekit.…arvam.log Failed to connect to Sarvam TTS   
+                                             WebSocket                         
+                                           {"error": "", "url": 
+"wss://api.sarvam.ai/text-to-speech/ws?model=bulbul:v2&send_completion_event=Tr
+ue"}
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py
+", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 1087, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 788, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\client.py", line 742, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1251, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1592, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\ai
+ohttp\connector.py", line 1325, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_eve
+nts.py", line 1198, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ssl_shutdown_timeout=ssl_shutdown_timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_eve
+nts.py", line 1231, in _create_connection_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\li
+vekit\plugins\sarvam\tts.py", line 489, in _connect_ws
+    return await asyncio.wait_for(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\tasks.py
+", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File 
+"C:\Users\Manibabu\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\timeouts
+.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+    13:56:14.982 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    13:56:14.987 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    13:56:14.991 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    13:56:19.032 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 2.0}
+    13:56:21.019 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    13:56:21.038 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    13:56:21.047 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    13:56:25.676 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:56:31.680 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:56:43.827 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:56:50.777 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:56:52.428 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:57:12.276 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:57:15.678 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:57:18.535 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    13:57:18.546 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    13:57:18.551 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    13:57:37.977 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:57:46.426 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:57:59.475 DEBUG    livekit.agents     resumed false interrupted speech  
+                                         {"timeout": 0}
+    13:58:05.623 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    13:58:05.636 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    13:58:05.641 ERROR    opentele…_exporter Failed to export metrics batch    
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    13:58:19.106 INFO     livekit.agents     closing agent session due to      
+                                             participant disconnect (disable   
+                                             via                               
+                                             `RoomInputOptions.close_on_disc…  
+                                         {"room": "room_5ozwc", "participant": 
+"user_f046f60c-25d5-4a5c-9f28-d240ccac9d68", "reason": "CLIENT_INITIATED"}
+    13:58:19.117 DEBUG    livekit.agents     stream closed  
+                                         {"participant": 
+"user_f046f60c-25d5-4a5c-9f28-d240ccac9d68", "source": "SOURCE_MICROPHONE"}
+    13:58:19.125 DEBUG    livekit.…arvam.log Starting TTS stream cleanup  
+                                           {"session_id": 1837643677392, 
+"connection_state": "disconnected", "model": "bulbul:v2", "speaker": "anushka",
+"client_request_id": "2e2ee6506c3b", "server_request_id": null}
+    13:58:19.129 DEBUG    livekit.…arvam.log segments channel closed  
+                                           {"session_id": 1837643677392, 
+"connection_state": "disconnected", "model": "bulbul:v2", "speaker": "anushka",
+"client_request_id": "2e2ee6506c3b", "server_request_id": null}
+    13:58:19.134 DEBUG    livekit.…arvam.log input channel closed  
+                                           {"session_id": 1837643677392, 
+"connection_state": "disconnected", "model": "bulbul:v2", "speaker": "anushka",
+"client_request_id": "2e2ee6506c3b", "server_request_id": null}
+    13:58:19.141 DEBUG    livekit.agents     input stream detached  
+                                         {"participant": 
+"user_f046f60c-25d5-4a5c-9f28-d240ccac9d68", "source": "SOURCE_UNKNOWN", 
+"accepted_sources": ["SOURCE_MICROPHONE"]}
+    13:58:21.177 DEBUG    livekit.agents     session closed  
+                                         {"reason": "participant_disconnected",
+"error": null}
+    13:58:22.627 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    13:58:22.638 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    13:58:22.645 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    13:58:28.912 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    13:58:28.917 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    13:58:34.950 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    13:58:34.955 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    13:58:36.677 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    13:58:36.680 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    13:58:36.685 ERROR    opentele…_exporter Failed to export metrics batch    
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    13:58:40.630 DEBUG    livekit.agents     uploading session report to       
+                                             LiveKit Cloud                     
+    13:58:41.176 DEBUG    livekit.agents     finished uploading  
+    13:58:41.180 DEBUG    livekit.agents     shutting down job task  
+                                         {"reason": "", "user_initiated": 
+false}
+    13:58:41.185 DEBUG    livekit.agents     job exiting  
+                                         {"reason": "", "tid": 23100, "job_id":
+"AJ_mohbqpmXRekt", "room_id": "RM_CUnZ8jby544t"}
+    13:58:42.209 DEBUG    charset_normalizer Encoding detection: utf_8 will    
+                                             be used as a fallback match       
+    13:58:42.214 DEBUG    charset_normalizer Encoding detection: Found utf_8   
+                                             as plausible (best-candidate)     
+                                             for content. With 0               
+                                             alternatives.                     
+    13:58:42.221 ERROR    opentele…_exporter Failed to export logs batch       
+                                             code: 429, reason:                
+                                             QuotaStatusNetworkError+          
+                                             )type.googleapis.com/google.rpc…  
+    13:58:42.229 DEBUG    livekit.agents     http_session(): closing the       
+                                             httpclient ctx                    
+    13:58:51.192 ERROR    livekit.agents     job shutdown is taking too much   
+                                             time..                            
+                                         {"tid": 23100, "job_id": 
+"AJ_mohbqpmXRekt", "room_id": "RM_CUnZ8jby544t"}
