@@ -34,9 +34,9 @@ logger = logging.getLogger("voice-agent")
 import config
 
 def _build_tts(config_provider: str = None, config_voice: str = None):
-    """Configure the Text-to-Speech provider based on env vars or dynamic config."""
+    """Configure TTS. Tries Sarvam first (for Telugu). Falls back to Deepgram on failure."""
     provider = (config_provider or os.getenv("TTS_PROVIDER", config.DEFAULT_TTS_PROVIDER)).lower()
-    
+
     if config_voice in ["anushka", "aravind", "amartya", "dhruv"]:
         provider = "sarvam"
 
@@ -46,16 +46,21 @@ def _build_tts(config_provider: str = None, config_voice: str = None):
         return deepgram.TTS(model=model)
 
     if provider == "sarvam":
-        logger.info(f"Using Sarvam TTS (Voice: {config_voice or 'anushka'})")
-        model = os.getenv("SARVAM_TTS_MODEL", config.SARVAM_MODEL)
-        voice = config_voice or os.getenv("SARVAM_VOICE", "anushka")
-        language = os.getenv("SARVAM_LANGUAGE", config.SARVAM_LANGUAGE)
-        tts = sarvam.TTS(model=model, speaker=voice, target_language_code=language)
-        # Sarvam's WebSocket path is timing out in this environment. Mark it as
-        # non-streaming so LiveKit uses Sarvam's regular HTTP synthesize API.
-        tts._capabilities = agents_tts.TTSCapabilities(streaming=False, aligned_transcript=False)
-        tts.prewarm = lambda: None
-        return tts
+        try:
+            logger.info(f"Attempting Sarvam TTS (Voice: {config_voice or 'anushka'})")
+            model = os.getenv("SARVAM_TTS_MODEL", config.SARVAM_MODEL)
+            voice = config_voice or os.getenv("SARVAM_VOICE", "anushka")
+            language = os.getenv("SARVAM_LANGUAGE", config.SARVAM_LANGUAGE)
+            tts = sarvam.TTS(model=model, speaker=voice, target_language_code=language)
+            # Force HTTP mode — Sarvam WebSocket times out in cloud environments.
+            tts._capabilities = agents_tts.TTSCapabilities(streaming=False, aligned_transcript=False)
+            tts.prewarm = lambda: None
+            logger.info("Sarvam TTS configured successfully (HTTP mode).")
+            return tts
+        except Exception as e:
+            logger.error(f"Sarvam TTS setup failed: {e}. Falling back to Deepgram TTS.")
+            fallback_model = os.getenv("DEEPGRAM_TTS_MODEL", config.DEEPGRAM_TTS_MODEL)
+            return deepgram.TTS(model=fallback_model)
 
     # Default to OpenAI
     logger.info(f"Using OpenAI TTS (Voice: {config_voice or 'alloy'})")
@@ -105,34 +110,38 @@ async def entrypoint(ctx: agents.JobContext):
     """
     Main entrypoint for the AI Voice Agent.
     """
-    logger.info(f"Connecting to room: {ctx.room.name}")
-    
+    logger.info(f"=== New job received for room: {ctx.room.name} ===")
+
     try:
         await ctx.connect()
-        logger.info("Connected to room successfully")
+        logger.info("Connected to LiveKit room successfully.")
     except Exception as e:
-        logger.error(f"Failed to connect to room: {e}")
+        logger.error(f"FATAL: Failed to connect to room: {e}")
         return
 
     # Initialize the Agent Session with plugins
     try:
+        tts_instance = _build_tts()
+        llm_instance = _build_llm()
+        logger.info(f"TTS: {type(tts_instance).__name__} | LLM: {type(llm_instance).__name__}")
+
         session = AgentSession(
             vad=silero.VAD.load(),
             stt=deepgram.STT(
                 model=config.STT_MODEL,
                 language="te",
                 detect_language=config.STT_DETECT_LANGUAGE,
-            ), 
-            llm=_build_llm(),
-            tts=_build_tts(),
-            conn_options=SessionConnectOptions(
-                tts_conn_options=APIConnectOptions(max_retry=3, retry_interval=2.0, timeout=30.0),
             ),
-            min_endpointing_delay=0.5, # Faster response after user stops talking
+            llm=llm_instance,
+            tts=tts_instance,
+            conn_options=SessionConnectOptions(
+                tts_conn_options=APIConnectOptions(max_retry=3, retry_interval=2.0, timeout=45.0),
+            ),
+            min_endpointing_delay=0.5,
         )
-        logger.info("Agent session initialized")
+        logger.info("Agent session initialized successfully.")
     except Exception as e:
-        logger.error(f"Failed to initialize session: {e}")
+        logger.error(f"FATAL: Failed to initialize session: {e}")
         return
 
     # Start the session
