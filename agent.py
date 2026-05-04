@@ -137,7 +137,8 @@ async def entrypoint(ctx: agents.JobContext):
             conn_options=SessionConnectOptions(
                 tts_conn_options=APIConnectOptions(max_retry=3, retry_interval=2.0, timeout=45.0),
             ),
-            min_endpointing_delay=0.5,
+            min_endpointing_delay=0.3,  # Fast response — 300ms after user stops talking
+            allow_interruptions=True,   # STOP speaking when user starts talking
         )
         logger.info("Agent session initialized successfully.")
     except Exception as e:
